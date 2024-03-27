@@ -11,13 +11,13 @@ const ABOUT = [
   {
     title: "MISION",
     description:
-      "Lideramos la transformación digital en ingeniería estructural, fusionando diseño computacional avanzado con creatividad humana para ofrecer soluciones óptimas y marcar nuevos límites en el campo.",
+      "Impulsamos la evolución digital de la ingeniería y construcción, priorizando el diseño optimizado. Con el poder del diseño generativo y la sinergia entre la creatividad humana y la tecnología, buscamos redefinir la ingeniería moderna, haciendo de cada proyecto un modelo de innovación y excelencia en la construcción.",
     url: "/mision-img.png",
   },
   {
     title: "VISION",
     description:
-      "Fusionamos creatividad y tecnología para soluciones óptimas en ingeniería estructural, utilizando inteligencia artificial para proyectos ágiles e innovadores, redefiniendo estándares globales",
+      "Ser referente a nivel global en Ingeniería computacional estructural, trascendiendo las fronteras de la ingeniería convencional. Aspiramos a redefinir la ingeniería moderna, estableciendo nuevos estándares de innovación, optimización y sostenibilidad en el futuro de la ingeniería y construcción.",
     url: "/vision-img.png",
   },
 ];
@@ -137,12 +137,12 @@ const LOGOS2 = [
         alt="Home background image about a construction"
       />
       <h1
-        class="text-white text-6xl pb-4 mx-44 text-pretty font-bold opacity-90 tracking-wide leading-tight"
+        class="text-white text-5xl pb-4 mx-44 text-pretty font-bold opacity-90 tracking-wide leading-tight"
       >
         AI, COMPUTATIONAL DESIGN & VIRTUAL CONSTRUCTION
       </h1>
       <p
-        class="text-white text-[28px] mx-28 text-pretty font-light opacity-95 leading-snug"
+        class="text-white text-2xl mx-28 text-pretty font-light opacity-95 leading-snug"
       >
         We develop advanced solutions for digital prototyping and process
         automation in the development of structural/BIM models, through
@@ -152,42 +152,42 @@ const LOGOS2 = [
       </p>
     </section>
 
+    <section id="about" class="flex w-full py-14 px-16 gap-x-12 justify-center">
+      {ABOUT.map((about) => <AboutCard {...about} />)}
+    </section>
+
     <section
       id="services"
       class="pt-4 services-container text-pretty text-center"
     >
-      <h1 class="py-16 text-5xl font-bold">NUESTROS SERVICIOS</h1>
+      <h1 class="py-16 text-4xl font-bold">NUESTROS SERVICIOS</h1>
       <div class="flex gap-x-1">
         <ServiceCard services={SERVICES[0]} class="bg-black-blue" />
         <ServiceCard services={SERVICES[1]} class="bg-skyblue" />
         <ServiceCard services={SERVICES[2]} class="bg-black-blue" />
       </div>
-      <h2 class="text-4xl font-bold pt-16 pb-7">Trainning In-House</h2>
-      <p class="text-2xl font-medium opacity-65 mx-14">
-        We develop advanced solutions for digital prototyping and process
-        automation in the development of structural/BIM models, through
-        programming and implementing artificial
+      <h2 class="text-xl font-bold pt-16 pb-7">Trainning In-House</h2>
+      <p class="font-light text-lg opacity-95 mx-20 text-pretty">
+        Ofrecemos a su equipo los conocimientos y habilidades necesarios para
+        sobresalir en el diseño computacional BIM y la optimización estructural,
+        promoviendo la excelencia en la ejecución de proyectos.
       </p>
 
       <div class="py-11">
-        <div class="slider py-7 relative overflow-hidden flex">
+        <div class="slider relative overflow-hidden flex">
           <div class="slider-track flex">
             {LOGOS.map((logo) => <SliderItem {...logo} />)}
             {LOGOS.map((logo) => <SliderItem {...logo} />)}
           </div>
         </div>
         <SliderTexto />
-        <div class="slider py-7 relative overflow-hidden flex">
+        <div class="slider relative overflow-hidden flex">
           <div class="slider-track flex">
             {LOGOS2.map((logos2) => <SliderItem {...logos2} />)}
             {LOGOS2.map((logos2) => <SliderItem {...logos2} />)}
           </div>
         </div>
       </div>
-    </section>
-
-    <section id="about" class="flex w-full py-14 px-16 gap-x-12 justify-center">
-      {ABOUT.map((about) => <AboutCard {...about} />)}
     </section>
 
     <section id="contact" class="contact-container pt-1 mt-5">
