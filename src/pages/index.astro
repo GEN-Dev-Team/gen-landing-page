@@ -8,6 +8,8 @@ import SliderTexto from "../components/SliderTexto.astro";
 import MisionIcon from "../components/icons/Mision.astro";
 import VisionIcon from "../components/icons/Vision.astro";
 import AboutCard from "../components/AboutCard.astro";
+import type { Code, Debug } from "astro:components";
+import SliderItem from "../components/Slider-Item.astro";
 
 const ABOUT = [
   {
@@ -42,6 +44,88 @@ const SERVICES = [
     description:
       "Impulse su negocio con la inteligencia artificial. En GEN ofrecemos soluciones personalizadas de IA para automatizar procesos, optimizar la toma de decisiones y mejorar la eficiencia en todas las áreas de su empresa.",
     url: "/AI-Implementation-img.jpeg",
+  },
+];
+
+const LOGOS = [
+  {
+    description: "Logo de C#",
+    url: "/Softwares/csharp-logo.png",
+  },
+  {
+    description: "Logo de Java",
+    url: "/Softwares/java-logo.png",
+  },
+  {
+    description: "Logo de Trimble Connect",
+    url: "/Softwares/trimbleconnect-logo.png",
+  },
+  {
+    description: "Logo de Grasshoper",
+    url: "/Softwares/grasshoper-logo.png",
+  },
+  {
+    description: "Logo de Rhinoceros",
+    url: "/Softwares/rhinoceros-logo.png",
+  },
+  {
+    description: "Logo de Tekla",
+    url: "/Softwares/tekla-logo.png",
+  },
+  {
+    description: "Logo de MathCAD",
+    url: "/Softwares/mathcad-logo.png",
+  },
+  {
+    description: "Logo de RM Bridge",
+    url: "/Softwares/rmbridge-logo.png",
+  },
+  {
+    description: "Logo de CSI ETABS",
+    url: "/Softwares/etabs-logo.png",
+  },
+  {
+    description: "Logo de SAP2000",
+    url: "/Softwares/sap2000-logo.png",
+  },
+  {
+    description: "Logo de CSI Bridge",
+    url: "/Softwares/csibridge-logo.png",
+  },
+];
+
+const LOGOS2 = [
+  {
+    description: "Logo de Sofistik",
+    url: "/Softwares/sofistik-logo.png",
+  },
+  {
+    description: "Logo de RFEM",
+    url: "/Softwares/rfem-logo.png",
+  },
+  {
+    description: "Logo de Dynamo",
+    url: "/Softwares/dynamo-logo.png",
+  },
+  {
+    description: "Logo de Revit",
+    url: "/Softwares/revit-logo.png",
+  },
+  {
+    description: "Logo de Navis",
+    url: "/Softwares/naviswork-logo.png",
+  },
+  {
+    description: "Logo de Python",
+    url: "/Softwares/python-logo.png",
+  },
+  {
+    description: "Logo de Bentley Syncrho",
+    url: "/Softwares/syncrho4d-logo.png",
+  },
+  {
+    description: "Logo de SMath Solver y SMath Writer",
+    url: "/Softwares/smathsolver-smathwriter-logo.png",
   },
 ];
 ---
@@ -90,9 +174,19 @@ const SERVICES = [
       </p>
 
       <div class="py-11">
-        <Slider />
+        <div class="slider py-7 relative overflow-hidden flex">
+          <div class="slider-track flex">
+            {LOGOS.map((logo) => <SliderItem {...logo} />)}
+            {LOGOS.map((logo) => <SliderItem {...logo} />)}
+          </div>
+        </div>
         <SliderTexto />
-        <Slider />
+        <div class="slider py-7 relative overflow-hidden flex">
+          <div class="slider-track flex">
+            {LOGOS2.map((logos2) => <SliderItem {...logos2} />)}
+            {LOGOS2.map((logos2) => <SliderItem {...logos2} />)}
+          </div>
+        </div>
       </div>
     </section>
 
@@ -136,5 +230,20 @@ const SERVICES = [
   .services-container {
     background-image: url("/services-bg.png");
     background-size: 100% auto;
+  }
+
+  /*CSS para el slider*/
+  .slider .slider-track {
+    animation: 60s slide infinite linear;
+  }
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
   }
 </style>
