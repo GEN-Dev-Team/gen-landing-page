@@ -11,13 +11,13 @@ const ABOUT = [
   {
     title: "MISION",
     description:
-      "Impulsamos la evolución digital de la ingeniería y construcción, priorizando el diseño optimizado. Con el poder del diseño generativo y la sinergia entre la creatividad humana y la tecnología, buscamos redefinir la ingeniería moderna, haciendo de cada proyecto un modelo de innovación y excelencia en la construcción.",
+      "We promote digital transformation in civil engineering through innovation in computational design and the use of emerging technologies, offering optimal and innovative solutions that contribute to excellence and quality improvement in each project.",
     url: "/mision-img.png",
   },
   {
     title: "VISION",
     description:
-      "Ser referente a nivel global en Ingeniería computacional estructural, trascendiendo las fronteras de la ingeniería convencional. Aspiramos a redefinir la ingeniería moderna, estableciendo nuevos estándares de innovación, optimización y sostenibilidad en el futuro de la ingeniería y construcción.",
+      "We seek to be global leaders in computational engineering and digital innovation, contributing to the evolution of conventional engineering through developments in automation, optimization and sustainability.",
     url: "/vision-img.png",
   },
 ];
@@ -26,20 +26,20 @@ const SERVICES = [
   {
     title: "BIM Development",
     description:
-      "Domine el diseño con BIM. Curso para optimizar proyectos de construcción, mejorar precisión, reducir costos y mejorar colaboración. Ideal para arquitectos, ingenieros y empresas del sector.",
-    url: "/BIM-development-img.jpeg",
+      "We develop digital models that allow us to optimize the planning and execution of engineering projects, improving collaboration and efficiency in all stages of the process.",
+    url: "/BIM-development-img.png",
   },
   {
     title: "Detail Engineering",
     description:
-      "Aumente la seguridad y eficiencia de sus estructuras. Curso para optimizar estructuras de forma segura y eficiente. Reduce el peso, mejora la resistencia y minimiza costos. Ideal para ingenieros, profesionales y empresas del sector.",
-    url: "/detail-engineering-img.jpeg",
+      "We carry out the detail of reinforcement of civil works to obtain sheets, measurements and plans from the generation of a BIM model that meets the appropriate engineering standards.",
+    url: "/detail-engineering-img.png",
   },
   {
     title: "AI Implementation",
     description:
-      "Impulse su negocio con la inteligencia artificial. En GEN ofrecemos soluciones personalizadas de IA para automatizar procesos, optimizar la toma de decisiones y mejorar la eficiencia en todas las áreas de su empresa.",
-    url: "/AI-Implementation-img.jpeg",
+      "We develop tools that implement artificial intelligence and machine learning technologies to create solutions that automate and improve efficiency in engineering processes.",
+    url: "/AI-Implementation-img.png",
   },
 ];
 
@@ -129,7 +129,8 @@ const LOGOS2 = [
 <Layout title="Inicio | GEN+" description="xd">
   <main>
     <section
-      class="bg-black-blue bg-opacity-85 relative w-full pb-44 pt-36 text-center"
+      id="about"
+      class="bg-black-blue bg-opacity-90 relative w-full pb-56 pt-48 text-center"
     >
       <img
         class="absolute bottom-0 -z-10 w-full h-full"
@@ -137,9 +138,9 @@ const LOGOS2 = [
         alt="Home background image about a construction"
       />
       <h1
-        class="text-white text-5xl pb-4 mx-44 text-pretty font-bold opacity-90 tracking-wide leading-tight"
+        class="text-white text-[42px] pb-4 mx-44 text-pretty flex flex-col font-bold opacity-90 tracking-wide leading-tight"
       >
-        AI, COMPUTATIONAL DESIGN & VIRTUAL CONSTRUCTION
+        AI, COMPUTATIONAL DESIGN <span>& VIRTUAL CONSTRUCTION</span>
       </h1>
       <p
         class="text-white text-2xl mx-28 text-pretty font-light opacity-95 leading-snug"
@@ -152,7 +153,7 @@ const LOGOS2 = [
       </p>
     </section>
 
-    <section id="about" class="flex w-full py-14 px-16 gap-x-12 justify-center">
+    <section class="flex w-full py-14 px-16 gap-x-12 justify-center">
       {ABOUT.map((about) => <AboutCard {...about} />)}
     </section>
 
@@ -160,7 +161,7 @@ const LOGOS2 = [
       id="services"
       class="pt-4 services-container text-pretty text-center"
     >
-      <h1 class="py-16 text-4xl font-bold">NUESTROS SERVICIOS</h1>
+      <h1 class="py-16 text-3xl font-bold">OUR SERVICES</h1>
       <div class="flex gap-x-1">
         <ServiceCard services={SERVICES[0]} class="bg-black-blue" />
         <ServiceCard services={SERVICES[1]} class="bg-skyblue" />
@@ -168,9 +169,9 @@ const LOGOS2 = [
       </div>
       <h2 class="text-xl font-bold pt-16 pb-7">Trainning In-House</h2>
       <p class="font-light text-lg opacity-95 mx-20 text-pretty">
-        Ofrecemos a su equipo los conocimientos y habilidades necesarios para
-        sobresalir en el diseño computacional BIM y la optimización estructural,
-        promoviendo la excelencia en la ejecución de proyectos.
+        We offer your team the knowledge and skills necessary to excel in BIM
+        computational design and structural optimization, promoting excellence
+        in project execution.
       </p>
 
       <div class="py-11">
@@ -190,19 +191,19 @@ const LOGOS2 = [
       </div>
     </section>
 
-    <section id="contact" class="contact-container pt-1 mt-5">
+    <section id="contact" class="contact-container pt-24 mt-5">
       <div class="flex d-flex mb-4">
         <div class="px-16 w-2/4">
-          <h1 class="text-5xl font-medium py-4 pb-6">
+          <h1 class="text-4xl font-medium py-4 pb-6 tracking-wide">
             GENERATIVE & OPTIMAL SOLUTIONS
           </h1>
-          <p class="font-light text-lg text-pretty">
-            Colaboramos con personas ambiciosas con mentes creativas. Hablemos
-            de tu proyecto y construyamos algo grande juntos.
+          <p class="font-light text-base text-pretty">
+            We collaborate with ambitious people with creative minds. Let's talk
+            about your project and build something great together.
           </p>
 
-          <p class="font-light text-lg py-4">
-            Contáctanos <a
+          <p class="font-light text-base py-4">
+            We are in touch <a
               href="https://mail.google.com/mail/?view=cm&to=hello@genplus.com"
               target="_blank"
               class="font-bold">hello@genplus.com</a
