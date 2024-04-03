@@ -1,43 +1,68 @@
 ---
 const HOMEIMAGES = [
   {
-    src: "/Carrousel-Imgs/Puente_JCH_ACERO.png",
+    src: "/Carrousel-Imgs/Puente_JCH_ACERO.webp",
     alt: "Puente_JCH_ACERO",
   },
   {
-    src: "/Carrousel-Imgs/image 1.png",
-    alt: "image 1",
-  },
-  {
-    src: "/Carrousel-Imgs/image 2.png",
-    alt: "image 2",
-  },
-  {
-    src: "/Carrousel-Imgs/image 3.png",
+    src: "/Carrousel-Imgs/image 3.webp",
     alt: "image 3",
   },
   {
-    src: "/Carrousel-Imgs/image 4.png",
+    src: "/Carrousel-Imgs/image 4.webp",
     alt: "image 4",
+  },
+  {
+    src: "/Carrousel-Imgs/image 5.webp",
+    alt: "image 5",
+  },
+  {
+    src: "/Carrousel-Imgs/image 6.webp",
+    alt: "image 6",
+  },
+  {
+    src: "/Carrousel-Imgs/image 1.webp",
+    alt: "image 1",
+  },
+  {
+    src: "/Carrousel-Imgs/image 2.webp",
+    alt: "image 2",
   },
 ];
 ---
 
 <div
   id="indicators-carousel"
-  class="relative h-full w-full overflow-hidden"
+  class="relative z-0 h-full w-full overflow-hidden"
   data-carousel="static"
 >
   <!-- Carousel wrapper -->
   <div class="h-full rounded-lg md:h-96">
     <!-- Item 1 -->
 
-    <div class="hidden duration-700 ease-in-out" data-carousel-item="Active">
+    <div
+      class="bg-black-blue hidden duration-700 ease-in-out"
+      data-carousel-item="Active"
+    >
       <img
-        src="/home-bg.png"
-        class="absolute block w-full"
+        src="/home-bg.webp"
+        class="absolute w-full opacity-5"
         alt="Home background image about a construction"
       />
+      <h1
+        class="text-white text-3xl pb-4 mx-44 pt-48 text-pretty flex flex-col font-bold opacity-90 tracking-wide leading-tight"
+      >
+        AI, COMPUTATIONAL DESIGN <span>& VIRTUAL CONSTRUCTION</span>
+      </h1>
+      <p
+        class="text-white text-xl mx-28 text-pretty font-light opacity-95 leading-snug"
+      >
+        We develop advanced solutions for digital prototyping and process
+        automation in the development of structural/BIM models, through
+        programming and implementing artificial intelligence in projects, in
+        order to maximize efficiency and provide superior value to our
+        customers.
+      </p>
     </div>
     <!-- All Items -->
     {
@@ -45,7 +70,7 @@ const HOMEIMAGES = [
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
           <img
             src={homeimage.src}
-            class="absolute block w-full "
+            class="block w-full h-full"
             alt={homeimage.alt}
           />
         </div>
@@ -92,6 +117,18 @@ const HOMEIMAGES = [
       aria-current="false"
       aria-label="Slide 6"
       data-carousel-slide-to="5"></button>
+    <button
+      type="button"
+      class="w-3 h-3 rounded-full"
+      aria-current="false"
+      aria-label="Slide 7"
+      data-carousel-slide-to="6"></button>
+    <button
+      type="button"
+      class="w-3 h-3 rounded-full"
+      aria-current="false"
+      aria-label="Slide 8"
+      data-carousel-slide-to="7"></button>
   </div>
   <!-- Slider controls -->
   <button
