@@ -6,6 +6,7 @@ import Footer from "../components/Footer.astro";
 import SliderTexto from "../components/SliderTexto.astro";
 import AboutCard from "../components/AboutCard.astro";
 import SliderItem from "../components/Slider-Item.astro";
+import Carrousel from "../components/Carrousel.astro";
 
 const ABOUT = [
   {
@@ -126,31 +127,13 @@ const LOGOS2 = [
 ];
 ---
 
-<Layout title="Inicio | GEN+" description="xd">
+<Layout
+  title="Inicio | GEN+"
+  description="Impulsamos la transformación digital en la ingeniería estructural mediante la innovación en diseño computacionl BIM  y optimización estructural. Automatización. Diseño Paramétrico. Diseño Generativo. IA. Machine Learning"
+>
   <main>
-    <section
-      id="about"
-      class="bg-black-blue bg-opacity-90 relative w-full pb-56 pt-48 text-center"
-    >
-      <img
-        class="absolute bottom-0 -z-10 w-full h-full"
-        src="/home-bg.png"
-        alt="Home background image about a construction"
-      />
-      <h1
-        class="text-white text-[42px] pb-4 mx-44 text-pretty flex flex-col font-bold opacity-90 tracking-wide leading-tight"
-      >
-        AI, COMPUTATIONAL DESIGN <span>& VIRTUAL CONSTRUCTION</span>
-      </h1>
-      <p
-        class="text-white text-2xl mx-28 text-pretty font-light opacity-95 leading-snug"
-      >
-        We develop advanced solutions for digital prototyping and process
-        automation in the development of structural/BIM models, through
-        programming and implementing artificial intelligence in projects, in
-        order to maximize efficiency and provide superior value to our
-        customers.
-      </p>
+    <section id="about" class="relative w-full h-[630px] text-center">
+      <Carrousel />
     </section>
 
     <section class="flex w-full py-14 px-16 gap-x-12 justify-center">
@@ -204,9 +187,9 @@ const LOGOS2 = [
 
           <p class="font-light text-base py-4">
             We are in touch <a
-              href="https://mail.google.com/mail/?view=cm&to=hello@genplus.com"
+              href="https://mail.google.com/mail/?view=cm&to=Coordinador@genplusdesign.com"
               target="_blank"
-              class="font-bold">hello@genplus.com</a
+              class="font-bold">Coordinador@genplusdesign.com</a
             >
           </p>
         </div>
