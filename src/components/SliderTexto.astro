@@ -22,9 +22,9 @@ const CONTENT = [
   class="slider pt-10 relative overflow-hidden flex font-bold text-xl text-nowrap"
 >
   <div class="slider-slide flex">
-    {CONTENT.map((content) => <p class="h-16 mx-12">{content.text}</p>)}
-    {CONTENT.map((content) => <p class="h-16 mx-12">{content.text}</p>)}
-    {CONTENT.map((content) => <p class="h-16 mx-12">{content.text}</p>)}
+    {CONTENT.map((content) => <h2 class="h-16 mx-12">{content.text}</h2>)}
+    {CONTENT.map((content) => <h2 class="h-16 mx-12">{content.text}</h2>)}
+    {CONTENT.map((content) => <h2 class="h-16 mx-12">{content.text}</h2>)}
   </div>
 </div>
 
@@ -32,16 +32,16 @@ const CONTENT = [
   /*CSS para el slider*/
 
   .slider .slider-slide {
-    animation: 80s slider infinite linear;
+    animation: 150s slider infinite linear;
   }
 
   @keyframes slider {
     from {
-      transform: translateX(-50%);
+      transform: translateX(0);
     }
 
     to {
-      transform: translateX(0);
+      transform: translateX(-100%);
     }
   }
 </style>
