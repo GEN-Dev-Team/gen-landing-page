@@ -18,13 +18,36 @@ const CONTENT = [
 ];
 ---
 
-<div
-  class="slider pt-10 relative overflow-hidden flex font-bold text-xl text-nowrap"
->
-  <div class="slider-slide flex">
-    {CONTENT.map((content) => <h2 class="h-16 mx-12">{content.text}</h2>)}
-    {CONTENT.map((content) => <h2 class="h-16 mx-12">{content.text}</h2>)}
-    {CONTENT.map((content) => <h2 class="h-16 mx-12">{content.text}</h2>)}
+<div class="slider relative overflow-hidden flex font-bold text-xl text-nowrap">
+  <div class="slider-slide flex gap-x-5">
+    {
+      CONTENT.map((content) => (
+        <h2 class="space-x-5  max-sm:space-x-[5px]">
+          <span>{content.text}</span> <span>-</span>
+        </h2>
+      ))
+    }
+    {
+      CONTENT.map((content) => (
+        <h2 class="space-x-5 max-sm:space-x-[5px]">
+          <span>{content.text}</span> <span>-</span>
+        </h2>
+      ))
+    }
+    {
+      CONTENT.map((content) => (
+        <h2 class="space-x-5 max-sm:space-x-[5px]">
+          <span>{content.text}</span> <span>-</span>
+        </h2>
+      ))
+    }
+    {
+      CONTENT.map((content) => (
+        <h2 class="space-x-5 max-sm:space-x-[5px]">
+          <span>{content.text}</span> <span>-</span>
+        </h2>
+      ))
+    }
   </div>
 </div>
 
@@ -42,6 +65,15 @@ const CONTENT = [
 
     to {
       transform: translateX(-100%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .slider {
+    }
+    .slider-slide {
+      font-size: 8px;
+      gap: 5px;
     }
   }
 </style>

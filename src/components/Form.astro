@@ -1,36 +1,87 @@
-<form class="w-1/2 px-16">
-  <div class="mb-4">
-    <label for="email" class="block mb-1 text-base font-light">Full name:</label
+<form
+  class="w-[580px]"
+  action="https://formsubmit.co/Apalpan@genplusdesign.com"
+  method="POST"
+>
+  <div class="mb-2">
+    <label for="Nombre" class="block mb-1 text-xl font-light"
+      >Nombres y Apellidos:</label
     >
+    <input
+      type="text"
+      id="Nombre"
+      name="Nombre"
+      required
+      class="shadow-sm border text-xl rounded-md block w-full px-2.5 py-[2px] border-blue-700 focus:border-blue-700 outline-0 bg-transparent"
+      required
+    />
+  </div>
+  <div class="mb-2">
+    <label for="Email" class="block mb-1 text-xl font-light">Email:</label>
     <input
       type="email"
-      id="email"
-      class="shadow-sm border text-base rounded-md block w-full px-2.5 py-[2px] border-blue-700 focus:border-blue-700 outline-0 bg-transparent"
+      id="Email"
+      name="Email"
+      required
+      class="shadow-sm border px-2.5 text-xl rounded-md w-full py-[2px] border-blue-700 outline-0 bg-transparent"
       required
     />
   </div>
-  <div class="mb-4">
-    <label for="password" class="block mb-1 text-base font-light">Email:</label>
-    <input
-      type="password"
-      id="password"
-      class="shadow-sm border px-2.5 text-base rounded-md py-[2px] border-blue-700 outline-0 bg-transparent"
-      required
-    />
-  </div>
-  <div class="mb-4">
-    <label for="message" class="block mb-1 text-base font-light">Message:</label
-    >
+  <div class="mb-2">
+    <label for="Mensaje" class="block mb-1 text-xl font-light">Mensaje:</label>
     <textarea
-      id="message"
-      rows="3"
-      class="block px-2.5 w-full text-base rounded-md border outline-0 marker: border-blue-700 bg-transparent"
+      id="Mensaje"
+      name="Mensaje"
+      rows="2"
+      required
+      class="block px-2.5 w-full text-xl rounded-md border outline-0 marker: border-blue-700 bg-transparent"
     ></textarea>
   </div>
 
   <button
     type="submit"
-    class="text-white w-full font-bold text-base bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-md px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-    >Send</button
+    class="text-white w-full font-bold text-xl bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-md px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+    >Enviar</button
   >
 </form>
+
+<style>
+  @media (max-width: 768px) {
+    form {
+      padding: 15px 0;
+      width: 100%;
+    }
+    label,
+    input,
+    button {
+      font-size: 10px;
+      border-radius: 2px;
+    }
+
+    label {
+      height: 20px;
+    }
+
+    input {
+      height: 26px;
+    }
+
+    div {
+      margin: 0;
+    }
+
+    textarea {
+      height: 49px;
+      margin-bottom: 6px;
+      border-radius: 2px;
+    }
+
+    button {
+      width: 100%;
+      padding: 11px 0 10px;
+      border-radius: 2px;
+      font-size: 10px;
+      line-height: normal;
+    }
+  }
+</style>

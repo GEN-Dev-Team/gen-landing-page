@@ -32,14 +32,41 @@ const { description, title } = Astro.props;
 </html>
 <style is:global>
   @font-face {
-    font-family: "Ruberoid";
-    src: url("/public/fonts/Ruberoid-Bold.otf") format("otf");
+    font-family: "ruberoid-light";
+    src: url("/public/fonts/Ruberoid/Ruberoid-Light.otf") format("opentype");
   }
-  h1,
-  h2,
-  h5,
-  .nav-bar {
-    font-family: "Ruberoid", system-ui, sans-serif;
+
+  @font-face {
+    font-family: "ruberoid-medium";
+    src: url("/public/fonts/Ruberoid/Ruberoid-Medium.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "ruberoid-regular";
+    src: url("/public/fonts/Ruberoid/Ruberoid-Regular.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "ruberoid-semibold";
+    src: url("/public/fonts/Ruberoid/Ruberoid-SemiBold.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "plusjakartasans-light";
+    src: url("/public/fonts/Plus-Jakarta/PlusJakartaSans-Light.ttf")
+      format("truetype");
+  }
+
+  @font-face {
+    font-family: "plusjakartasans-regular";
+    src: url("/public/fonts/Plus-Jakarta/PlusJakartaSans-Regular.ttf")
+      format("truetype");
+  }
+
+  @font-face {
+    font-family: "plusjakartasans-semibold";
+    src: url("/public/fonts/Plus-Jakarta/PlusJakartaSans-SemiBold.ttf")
+      format("truetype");
   }
 
   body {

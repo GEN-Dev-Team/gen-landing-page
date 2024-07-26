@@ -2,4 +2,16 @@
 const { description, url } = Astro.props;
 ---
 
-<img class="h-40 mx-5" src={url} alt={description} />
+<img src={url} alt={description} />
+
+<style>
+  img {
+    width: 92px;
+    height: auto;
+  }
+  @media (max-width: 768px) {
+    img {
+      width: 31px;
+    }
+  }
+</style>

@@ -4,125 +4,172 @@ import ServiceCard from "../components/ServiceCard.astro";
 import Form from "../components/Form.astro";
 import Footer from "../components/Footer.astro";
 import SliderTexto from "../components/SliderTexto.astro";
-import AboutCard from "../components/AboutCard.astro";
 import SliderItem from "../components/Slider-Item.astro";
-import Carrousel from "../components/Carrousel.astro";
-
-const ABOUT = [
-  {
-    title: "MISION",
-    description:
-      "We promote digital transformation in civil engineering through innovation in computational design and the use of emerging technologies, offering optimal and innovative solutions that contribute to excellence and quality improvement in each project.",
-    url: "/mision-img.webp",
-  },
-  {
-    title: "VISION",
-    description:
-      "We seek to be global leaders in computational engineering and digital innovation, contributing to the evolution of conventional engineering through developments in automation, optimization and sustainability.",
-    url: "/vision-img.webp",
-  },
-];
+import Whatsapp from "../components/icons/Whatsapp.astro";
+import Brochure from "../components/icons/Brochure.astro";
+import SponsorSlider from "../components/Sponsor-Slider.astro";
+import Send from "../components/icons/Send.astro";
+import Download from "../components/icons/Download.astro";
 
 const SERVICES = [
   {
-    title: "BIM Development",
-    description:
-      "We develop digital models that allow us to optimize the planning and execution of engineering projects, improving collaboration and efficiency in all stages of the process.",
-    url: "/BIM-development-img.webp",
+    id: 1,
+    title: "GESTIÓN BIM",
+    description: [
+      "Metodología BIM | VDC",
+      "Modelado BIM 4D | 5D",
+      "Renderizados",
+    ],
+    url: "/public/services/Gestión BIM.webp",
   },
   {
-    title: "Detail Engineering",
-    description:
-      "We carry out the detail of reinforcement of civil works to obtain sheets, measurements and plans from the generation of a BIM model that meets the appropriate engineering standards.",
-    url: "/detail-engineering-img.webp",
+    id: 2,
+    title: "AUTOMATIZACIÓN BIM",
+    description: [
+      "Automatización de Procesos",
+      "Interoperabilidad BIM",
+      "Herramientas GUI",
+    ],
+    url: "/public/services/Automatización BIM.webp",
   },
   {
-    title: "AI Implementation",
-    description:
-      "We develop tools that implement artificial intelligence and machine learning technologies to create solutions that automate and improve efficiency in engineering processes.",
-    url: "/AI-Implementation-img.webp",
+    id: 3,
+    title: "DETAIL ENGINEERING",
+    description: [
+      "Rebar Detailing",
+      "Steel Detailing",
+      "Metrados y Presupuestos",
+    ],
+    url: "/public/services/Detail Engineering.webp",
+  },
+  {
+    id: 4,
+    title: "DISEÑO COMPUTACIONAL",
+    description: [
+      "Diseño Computacional",
+      "Diseño Paramétrico",
+      "Diseño Generativo",
+    ],
+    url: "/public/services/Diseño computacional.webp",
+  },
+  {
+    id: 5,
+    title: "INGENIERÍA ESTRUCTURAL",
+    description: [
+      "Análisis Estructural",
+      "Diseño Estructural",
+      "Verificación Estructural",
+    ],
+    url: "/public/services/Ingeniería Estructural.webp",
+  },
+  {
+    id: 6,
+    title: "INTEGRATED OPTIMIZATION",
+    description: [
+      "Structural Optimization",
+      "Resource Optimization",
+      "Sustainable Optimization",
+    ],
+    url: "/public/services/Integrated Optimization.webp",
+  },
+  {
+    id: 7,
+    title: "DESARROLLO WEB",
+    description: [
+      "UX/UI Development",
+      "Full Stack Development",
+      "Business Analytics",
+    ],
+    url: "/public/services/Desarrollo web.webp",
+  },
+  {
+    id: 8,
+    title: "AI IMPLEMENTATION",
+    description: ["Generative AI", "Machine Learning", "AI Automation Process"],
+    url: "/public/services/AI Implementation.webp",
+  },
+  {
+    id: 9,
+    title: "TRAINNING IN-HOUSE",
+    description: [
+      "Diseño Computacional BIM+",
+      "Automatización y Optimización",
+      "Inteligencia Artificial",
+    ],
+    url: "/public/services/Training in House.webp",
   },
 ];
 
 const LOGOS = [
   {
-    description: "Logo de C#",
-    url: "/Softwares/csharp-logo.png",
-  },
-  {
-    description: "Logo de Java",
-    url: "/Softwares/java-logo.png",
-  },
-  {
-    description: "Logo de Trimble Connect",
-    url: "/Softwares/trimbleconnect-logo.png",
-  },
-  {
-    description: "Logo de Grasshoper",
-    url: "/Softwares/grasshoper-logo.png",
-  },
-  {
-    description: "Logo de Rhinoceros",
-    url: "/Softwares/rhinoceros-logo.png",
-  },
-  {
-    description: "Logo de Tekla",
-    url: "/Softwares/tekla-logo.png",
-  },
-  {
-    description: "Logo de MathCAD",
-    url: "/Softwares/mathcad-logo.png",
-  },
-  {
-    description: "Logo de RM Bridge",
-    url: "/Softwares/rmbridge-logo.png",
-  },
-  {
-    description: "Logo de CSI ETABS",
-    url: "/Softwares/etabs-logo.png",
-  },
-  {
-    description: "Logo de SAP2000",
-    url: "/Softwares/sap2000-logo.png",
-  },
-  {
-    description: "Logo de CSI Bridge",
-    url: "/Softwares/csibridge-logo.png",
-  },
-];
-
-const LOGOS2 = [
-  {
     description: "Logo de Sofistik",
-    url: "/Softwares/sofistik-logo.png",
+    url: "/Softwares/DYNAMO.webp",
   },
-  {
-    description: "Logo de RFEM",
-    url: "/Softwares/rfem-logo.png",
-  },
+
   {
     description: "Logo de Dynamo",
-    url: "/Softwares/dynamo-logo.png",
+    url: "/Softwares/Grasshopper.webp",
   },
-  {
-    description: "Logo de Revit",
-    url: "/Softwares/revit-logo.png",
-  },
+
   {
     description: "Logo de Navis",
-    url: "/Softwares/naviswork-logo.png",
+    url: "/Softwares/PYTHON.webp",
   },
   {
     description: "Logo de Python",
-    url: "/Softwares/python-logo.png",
+    url: "/Softwares/RFEM.webp",
   },
   {
     description: "Logo de Bentley Syncrho",
-    url: "/Softwares/syncrho4d-logo.png",
+    url: "/Softwares/REVIT.webp",
   },
   {
     description: "Logo de SMath Solver y SMath Writer",
-    url: "/Softwares/smathsolver-smathwriter-logo.png",
+    url: "/Softwares/LOGO 1.webp",
+  },
+  {
+    description: "Logo de SMath Solver y SMath Writer",
+    url: "/Softwares/LOGO 2.webp",
+  },
+  {
+    description: "Logo de SMath Solver y SMath Writer",
+    url: "/Softwares/LOGO 3.webp",
+  },
+  {
+    description: "Logo de SMath Solver y SMath Writer",
+    url: "/Softwares/LOGO 4.webp",
+  },
+  {
+    description: "Logo de SMath Solver y SMath Writer",
+    url: "/Softwares/LOGO 5.webp",
+  },
+  {
+    description: "Logo de SMath Solver y SMath Writer",
+    url: "/Softwares/LOGO 6.webp",
+  },
+  {
+    description: "Logo de SMath Solver y SMath Writer",
+    url: "/Softwares/LOGO 7.webp",
+  },
+  {
+    description: "Logo de SMath Solver y SMath Writer",
+    url: "/Softwares/LOGO 8.webp",
+  },
+  {
+    description: "Logo de SMath Solver y SMath Writer",
+    url: "/Softwares/LOGO 9.webp",
+  },
+  {
+    description: "Logo de SMath Solver y SMath Writer",
+    url: "/Softwares/LOGO 10.webp",
+  },
+  {
+    description: "Logo de SMath Solver y SMath Writer",
+    url: "/Softwares/LOGO 11.webp",
+  },
+  {
+    description: "Logo de SMath Solver y SMath Writer",
+    url: "/Softwares/LOGO 12.webp",
   },
 ];
 ---
@@ -132,84 +179,406 @@ const LOGOS2 = [
   description="Impulsamos la transformación digital en la ingeniería estructural mediante la innovación en diseño computacionl BIM  y optimización estructural. Automatización. Diseño Paramétrico. Diseño Generativo. IA. Machine Learning"
 >
   <main>
-    <section id="about" class="relative w-full h-[610px] text-center">
-      <Carrousel />
-    </section>
-
-    <section class="flex w-full py-14 px-16 gap-x-12 justify-center">
-      {ABOUT.map((about) => <AboutCard {...about} />)}
-    </section>
-
-    <section
-      id="services"
-      class="pt-4 services-container text-pretty text-center"
+    <a
+      class="sticky-button-1"
+      href="https://wa.me/+51902760892/?text=¡Hola! Me gustaría agendar una reunión para saber más acerca de GEN+ y los servicios que brindan."
+      target="_blank"
     >
-      <h1 class="py-16 text-2xl font-bold">OUR SERVICES</h1>
-      <div class="flex gap-x-1">
-        <ServiceCard services={SERVICES[0]} class="bg-black-blue" />
-        <ServiceCard services={SERVICES[1]} class="bg-skyblue" />
-        <ServiceCard services={SERVICES[2]} class="bg-black-blue" />
-      </div>
-      <h2 class="text-xl font-bold pt-16 pb-7">Trainning In-House</h2>
-      <p class="font-light text-base opacity-95 mx-20 text-pretty">
-        We offer your team the knowledge and skills necessary to excel in BIM
-        computational design and structural optimization, promoting excellence
-        in project execution.
-      </p>
-
-      <div class="py-11">
-        <div class="slider relative overflow-hidden flex">
-          <div class="slider-track flex">
-            {LOGOS.map((logo) => <SliderItem {...logo} />)}
-            {LOGOS.map((logo) => <SliderItem {...logo} />)}
-          </div>
+      <div class="dropdown-container">
+        <div class="dropdown-icon">
+          <Whatsapp />
         </div>
+        <img src="/src/assets/images/header-separator.svg" alt="" />
+        <span class="dropdown-text">Contáctanos</span>
+      </div>
+    </a>
+    <a
+      class="sticky-button-2"
+      href="https://www.canva.com/design/DAGLvcgZ7hE/XJ61PHCxRwqV0z5tPHHyPg/view?utm_content=DAGLvcgZ7hE&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+      target="_blank"
+    >
+      <div class="dropdown-container">
+        <div class="dropdown-icon">
+          <Brochure />
+        </div>
+        <img src="/src/assets/images/header-separator.svg" alt="" />
+        <span class="dropdown-text">Descargar Brochure</span>
+      </div>
+    </a>
+
+    <section id="home" class="home-container">
+      <div class="home-background-degre"></div>
+      <span class="home-title"> Ingeniería Moderna: </span>
+      <span class="home-text">
+        Integrando tecnología, innovación y colaboración para un futuro
+        sostenible
+      </span>
+      <a href="#services" class="home-button">CONOCE MAS</a>
+    </section>
+
+    <section id="about" class="about-container">
+      <span class="title">NOSOTROS</span>
+      <p>
+        Ofrecemos soluciones avanzadas de digitalización y automatización de
+        procesos con diseño computacional, construcción virtual e inteligencia
+        artificial, optimizando eficiencia y calidad en todas las fases del
+        ciclo de inversión de proyectos, aportando un valor significativo a
+        nuestros colaboradores
+      </p>
+    </section>
+
+    <section id="services" class="services-container">
+      <h1 class="title">NUESTROS SERVICIOS</h1>
+      <div class="card-services">
+        {
+          SERVICES.map((service) => (
+            <ServiceCard
+              service={service}
+              class={`${service.id === 2 || service.id === 5 || service.id === 8 ? "bg-skyblue" : "bg-black-blue"}`}
+            />
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="sliders-container">
+      <a
+        class="brochure-download"
+        href="https://www.canva.com/design/DAGLvcgZ7hE/XJ61PHCxRwqV0z5tPHHyPg/view?utm_content=DAGLvcgZ7hE&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+        target="_blank"
+      >
+        <img src="/public/brain-img.png" alt="" />
+        <span>Hola! quiero descargar el brochure de GEN+</span>
+        <div class="download-button">
+          <Send class="absolute top-0 max-sm:size-[21px]" />
+          <Download
+            class="absolute top-[25%] right-[15%] max-sm:size-[9px] max-sm:top-[23%] max-sm:right-[23.5%]"
+          />
+        </div>
+      </a>
+
+      <div
+        class="slider-container pt-[75px] mt-7 pb-[35px] space-y-[64px] max-md:space-y-2 px-6"
+      >
         <SliderTexto />
         <div class="slider relative overflow-hidden flex">
-          <div class="slider-track flex">
-            {LOGOS2.map((logos2) => <SliderItem {...logos2} />)}
-            {LOGOS2.map((logos2) => <SliderItem {...logos2} />)}
+          <div class="slider-track flex gap-x-10 max-md:gap-x-[15px]">
+            {LOGOS.map((LOGOS) => <SliderItem {...LOGOS} />)}
           </div>
         </div>
       </div>
+
+      <SponsorSlider />
     </section>
 
     <section id="contact" class="contact-container pt-24 mt-5">
-      <div class="flex d-flex mb-4">
-        <div class="px-16 w-2/4">
-          <h1 class="text-4xl font-medium py-4 pb-6 tracking-wide">
-            GENERATIVE & OPTIMAL SOLUTIONS
-          </h1>
-          <p class="font-light text-base text-pretty">
-            We collaborate with ambitious people with creative minds. Let's talk
-            about your project and build something great together.
-          </p>
+      <div class="contact-description">
+        <h1 class="contact-title">GENERATIVE AND OPTIMAL DESIGN SOLUTIONS</h1>
+        <p class="font-light text-xl text-pretty contact-text">
+          Colaboramos con personas ambiciosas con mentes creativas;
+        </p>
+        <p class="font-light text-xl text-pretty contact-text">
+          Hablemos de tu proyecto y construyamos algo grande juntos
+        </p>
 
-          <p class="font-light text-base py-4">
-            We are in touch <a
-              href="https://mail.google.com/mail/?view=cm&to=Coordinador@genplusdesign.com"
-              target="_blank"
-              class="font-bold">Coordinador@genplusdesign.com</a
-            >
-          </p>
+        <p class="font-light text-xl text-pretty contact-text-media">
+          Contáctenos para ver cómo podemos mejorar su eficiencia y alcanzar sus
+          objetivos
+        </p>
+
+        <div class="contact-details">
+          <p class="font-light text-xl">Contáctanos:</p>
+          <a
+            href="https://mail.google.com/mail/?view=cm&to=Coordinador@genplusdesign.com"
+            target="_blank"
+            class="font-bold">Coordinador@genplusdesign.com</a
+          >
+          <span>/</span>
+          <span>995567873</span>
         </div>
-
-        <Form />
       </div>
-      <Footer />
+      <Form />
     </section>
+    <Footer />
   </main>
 </Layout>
 
 <style>
-  .contact-container {
-    background-image: url("/contact-bg.webp");
-    background-size: cover;
+  main {
+    max-width: 1440px;
+    margin-inline: auto;
+    position: relative;
+  }
+
+  .sticky-button-1 {
+    position: fixed;
+    top: 200px;
+    right: calc((100% - 1440px) / 2);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  .sticky-button-2 {
+    position: fixed;
+    top: 300px;
+    right: calc((100% - 1440px) / 2);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    z-index: 10;
+  }
+
+  .dropdown-container {
+    width: 80px; /* Inicialmente solo muestra el icono */
+    height: 80px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px 0px 0px 10px;
+    background: #2165ff;
+    box-shadow: 0px 0px 9px 0px rgba(255, 255, 255, 0.78) inset;
+    color: #fff;
+    font-family: "plusjakartasans-semibold";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.1px;
+    transition:
+      width 0.3s ease,
+      padding-left 0.3s ease; /* Transición para la animación */
+    overflow: hidden;
+  }
+
+  .dropdown-container img {
+    opacity: 0;
+    height: 68px;
+    margin-left: auto;
+  }
+
+  .dropdown-text {
+    opacity: 0;
+  }
+
+  .dropdown-container:hover {
+    width: 254px;
+    gap: 17px;
+
+    img,
+    .dropdown-text {
+      opacity: 1;
+      visibility: visible;
+      text-align: center;
+    }
+  }
+
+  .home-container {
+    width: 100%;
+    height: 613px;
+    padding: 125px 0px 18px 84px;
+    position: relative;
+    font-family: "ruberoid-semibold";
+    color: white;
+    background-image: url("/public/backgrounds/home-bg.webp");
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+
+    .home-background-degre {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(10, 36, 76, 0.85) 16.5%,
+        rgba(10, 36, 76, 0.5) 73.5%,
+        rgba(55, 81, 141, 0) 100%
+      );
+    }
+
+    .home-title {
+      font-family: "ruberoid-light";
+      font-size: 35px;
+      font-style: normal;
+      line-height: 55px; /* 157.143% */
+      letter-spacing: 0.035px;
+      z-index: 1;
+    }
+
+    .home-text {
+      max-width: 789px;
+      font-size: 45px;
+      font-weight: 600;
+      line-height: 55px; /* 122.222% */
+      letter-spacing: 0.045px;
+      text-wrap: pretty;
+      z-index: 1;
+    }
+
+    .home-button {
+      width: fit-content;
+      display: inline-flex;
+      padding: 12px 20px;
+      margin-top: 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 6px;
+      background: var(--Azul-2, #2165ff);
+      box-shadow:
+        0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+        0px 0px 14.6px 0px rgba(255, 255, 255, 0.56) inset;
+      z-index: 1;
+    }
+  }
+
+  .about-container {
+    width: 100%;
+    padding: 45px 160px 0px;
+    background-image: url("/public/backgrounds/about-bg.jpg");
+    background-size: 100% 100%;
+
+    p {
+      display: flex;
+      max-width: 1175px;
+      max-height: 221px;
+      margin-inline: auto;
+      text-wrap: pretty;
+      text-align: center;
+      color: #0a244c;
+      font-family: "Ruberoid-medium";
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 45px; /* 150% */
+      letter-spacing: 0.03px;
+    }
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    color: #2165ff;
+    font-family: "Ruberoid-semibold";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50px; /* 250% */
+    letter-spacing: 0.02px;
   }
 
   .services-container {
-    background-image: url("/services-bg.webp");
-    background-size: 100% auto;
+    width: 100%;
+    background-image: url("/public/backgrounds/service-bg.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 45px 32px 58px;
+
+    .title {
+      margin-top: 35px;
+    }
+
+    .card-services {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px 40px;
+    }
+  }
+
+  .sliders-container {
+    width: 100%;
+    padding-top: 48px;
+    background-image: url("/public/backgrounds/sliders-bg.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    .brochure-download {
+      width: 804px;
+      height: 59px;
+      padding: 0px 10px 0 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-radius: 30px;
+      margin-inline: auto;
+      align-items: center;
+      background: #fff;
+      box-shadow: 0px 2px 13.5px 0px rgba(0, 0, 0, 0.25);
+
+      span {
+        color: #000;
+        text-align: center;
+        leading-trim: both;
+        font-family: "ruberoid-regular";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 450;
+        line-height: 50px; /* 250% */
+        letter-spacing: 0.02px;
+      }
+
+      img {
+        width: 60px;
+      }
+
+      .download-button {
+        width: 44px;
+        height: 44px;
+        position: relative;
+      }
+    }
+  }
+
+  .slider-container {
+    width: 100%;
+    background-image: url("/public/backgrounds/slider-bg.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 52px 70px;
+    background-image: url("/public/backgrounds/contact-bg.webp");
+    background-size: cover;
+  }
+
+  .contact-description {
+    max-width: 645px;
+    display: flex;
+    flex-direction: column;
+
+    .contact-title {
+      margin-bottom: 48px;
+      color: #0a244c;
+      font-family: "ruberoid-medium";
+      font-size: 45px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 60px; /* 133.333% */
+      letter-spacing: -2.25px;
+    }
+
+    .contact-text-media {
+      display: none;
+    }
+
+    .contact-details {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0px 15px;
+      margin-top: 20px;
+      font-size: 20px;
+    }
   }
 
   /*CSS para el slider*/
@@ -219,11 +588,146 @@ const LOGOS2 = [
 
   @keyframes slide {
     from {
-      transform: translateX(-50%);
+      transform: translateX(0);
     }
 
     to {
-      transform: translateX(0);
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    main {
+      width: 100%;
+    }
+
+    .sticky-button-1,
+    .sticky-button-2 {
+      display: none;
+    }
+
+    .home-container {
+      height: 172px;
+      padding: 25px 16px 10px;
+
+      .home-title {
+        font-size: 14px;
+        line-height: normal;
+      }
+
+      .home-text {
+        width: 256px;
+        font-size: 18px;
+        font-family: "ruberoid-medium";
+        line-height: normal;
+      }
+      .home-button {
+        width: 132px;
+        height: 31px;
+        margin-top: 16px;
+        font-size: 12px;
+      }
+    }
+
+    .about-container {
+      padding: 15px 28px 20px 37px;
+
+      .title {
+        font-size: 9px;
+      }
+
+      p {
+        font-size: 12px;
+        line-height: 17px;
+      }
+    }
+
+    .services-container {
+      padding: 17px;
+
+      .title {
+        margin-top: 0px;
+        margin-bottom: 17px;
+        font-size: 9px;
+      }
+
+      .card-services {
+        gap: auto;
+      }
+    }
+
+    .sliders-container {
+      padding: 20px 8px;
+
+      .brochure-download {
+        width: 263px;
+        height: 33px;
+        margin-inline: auto;
+        span {
+          font-size: 8px;
+          line-height: normal;
+        }
+        img {
+          width: 28px;
+        }
+
+        .download-button {
+          width: 21px;
+          height: 21px;
+        }
+      }
+    }
+
+    .slider-container {
+      margin-top: 20px;
+      padding: 20px 4px;
+      row-gap: 10px;
+    }
+
+    .contact-container {
+      width: 100%;
+      flex-direction: column;
+      padding: 10px 27px;
+      margin-top: 0px;
+    }
+
+    .contact-description {
+      width: 100%;
+
+      .contact-title {
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px; /* 128.571% */
+        letter-spacing: -0.7px;
+        margin-bottom: 0px;
+      }
+
+      .contact-text {
+        display: none;
+      }
+
+      .contact-text-media {
+        margin-top: 3px;
+        display: block;
+        line-height: 15px; /* 125% */
+        letter-spacing: 0.06px;
+        text-align: center;
+      }
+
+      p {
+        font-size: 12px;
+      }
+
+      .contact-details {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        margin-top: 7px;
+        font-size: 12px;
+      }
     }
   }
 </style>

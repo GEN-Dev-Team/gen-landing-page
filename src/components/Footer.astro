@@ -1,20 +1,115 @@
-<footer class="py-5 pt-24 px-16">
-  <div class="w-full flex row-auto justify-between">
-    <div class="flex items-center">
-      <a
-        href="#"
-        class="py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-        data-language="es"
-        >ES
-      </a>
-      <span class="text-xl font-extralight px-2">|</span>
-      <a
-        href="#"
-        class="py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-        data-language="en">EN</a
-      >
-    </div>
-    <div class="text-base font-regular"></div>
-    © 2024 GEN+. All Rights Reserved.
+---
+import LinkedIn from "./icons/LinkedIn.astro";
+---
+
+<footer class="footer-container">
+  <div class="first-container">
+    <span>Términos generales y condiciones</span>
+    <span>Politicas de privacidad</span>
+  </div>
+
+  <div class="second-container">
+    <img src="/src/assets/images/gen-logo-footer.svg" alt="" />
+
+    <span>@ copyrigth 2024 - Generative and Optimal design solutions</span>
+  </div>
+
+  <div class="third-container">
+    <span>CONOCE MÁS: </span>
+    <a href="https://linkedin.com/company/gen-plus-design/" target="_blank">
+      <LinkedIn />
+    </a>
   </div>
 </footer>
+
+<style>
+  .footer-container {
+    max-width: 1440px;
+    height: 133px;
+    padding: 44px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0a244c;
+    color: white;
+    font-family: "plusjakartasans-semibold";
+
+    .first-container {
+      display: flex;
+      gap: 41px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 23px; /* 164.286% */
+      letter-spacing: 0.014px;
+
+      > span:first-child {
+        max-width: 132px;
+      }
+
+      > span:last-child {
+        max-width: 96px;
+      }
+    }
+
+    .second-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      img {
+        align-self: flex-end;
+        height: 15px;
+      }
+    }
+
+    .third-container {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      height: 87px;
+      padding: 17px 16px;
+
+      .first-container {
+        width: auto;
+        flex-direction: column;
+        gap: 13px;
+        font-size: 12px;
+        line-height: 14px; /* 116.667% */
+
+        > span:first-child {
+          width: 118px;
+        }
+
+        > span:last-child {
+          text-wrap: nowrap;
+        }
+      }
+
+      .second-container {
+        gap: 7px;
+
+        img {
+          justify-content: end;
+          width: 80px;
+        }
+
+        span {
+          width: 115px;
+          font-family: "ruberoid-regular";
+          font-size: 8px;
+          line-height: 10px; /* 125% */
+          text-align: end;
+        }
+      }
+
+      .third-container {
+        display: none;
+      }
+    }
+  }
+</style>
