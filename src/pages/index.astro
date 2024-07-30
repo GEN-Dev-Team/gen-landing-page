@@ -197,21 +197,23 @@ const LOGOS = [
     </a>
 
     <section id="home" class="home-container">
-      <div class="home-video-container">
-        <video
-          autoplay
-          muted
-          loop
-          src="/backgrounds/home-bg.mp4"
-          class="home-video"></video>
+      <div class="home-content">
+        <div class="home-video-container">
+          <video
+            autoplay
+            muted
+            loop
+            src="/backgrounds/home-bg.mp4"
+            class="home-video"></video>
+        </div>
+        <div class="home-background-degre"></div>
+        <span class="home-title"> Ingeniería Moderna: </span>
+        <span class="home-text">
+          Integrando tecnología, innovación y colaboración para un futuro
+          sostenible
+        </span>
+        <a href="#services" class="home-button">CONOCE MAS</a>
       </div>
-      <div class="home-background-degre"></div>
-      <span class="home-title"> Ingeniería Moderna: </span>
-      <span class="home-text">
-        Integrando tecnología, innovación y colaboración para un futuro
-        sostenible
-      </span>
-      <a href="#services" class="home-button">CONOCE MAS</a>
     </section>
 
     <section id="about" class="about-container">
@@ -226,85 +228,91 @@ const LOGOS = [
     </section>
 
     <section id="services" class="services-container">
-      <h1 class="title">NUESTROS SERVICIOS</h1>
-      <div class="card-services">
-        {
-          SERVICES.map((service) => (
-            <ServiceCard
-              service={service}
-              class={`${service.id === 2 || service.id === 5 || service.id === 8 ? "bg-skyblue" : "bg-black-blue"}`}
-            />
-          ))
-        }
+      <div class="services-content">
+        <h1 class="title">NUESTROS SERVICIOS</h1>
+        <div class="card-services">
+          {
+            SERVICES.map((service) => (
+              <ServiceCard
+                service={service}
+                class={`${service.id === 2 || service.id === 5 || service.id === 8 ? "bg-skyblue" : "bg-black-blue"}`}
+              />
+            ))
+          }
+        </div>
       </div>
     </section>
 
     <section class="sliders-container">
-      <a
-        class="brochure-download"
-        href="https://www.canva.com/design/DAGLvcgZ7hE/XJ61PHCxRwqV0z5tPHHyPg/view?utm_content=DAGLvcgZ7hE&utm_campaign=designshare&utm_medium=link&utm_source=editor"
-        target="_blank"
-      >
-        <img src="/brain-img.png" alt="" />
-        <span>Hola! quiero descargar el brochure de GEN+</span>
-        <div class="download-button">
-          <Send class="absolute top-0 max-sm:size-[21px]" />
-          <Download
-            class="absolute top-[25%] right-[15%] max-sm:size-[9px] max-sm:top-[23%] max-sm:right-[23.5%]"
-          />
-        </div>
-      </a>
+      <div class="slider-content">
+        <a
+          class="brochure-download"
+          href="https://www.canva.com/design/DAGLvcgZ7hE/XJ61PHCxRwqV0z5tPHHyPg/view?utm_content=DAGLvcgZ7hE&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+          target="_blank"
+        >
+          <img src="/brain-img.png" alt="" />
+          <span>Hola! quiero descargar el brochure de GEN+</span>
+          <div class="download-button">
+            <Send class="absolute top-0 max-sm:size-[21px]" />
+            <Download
+              class="absolute top-[25%] right-[15%] max-sm:size-[9px] max-sm:top-[23%] max-sm:right-[23.5%]"
+            />
+          </div>
+        </a>
 
-      <div
-        class="slider-container pt-[75px] mt-7 pb-[35px] space-y-[64px] max-md:space-y-2 px-6"
-      >
-        <SliderTexto />
-        <div class="slider relative overflow-hidden flex">
-          <div class="slider-track flex gap-x-10 max-md:gap-x-[15px]">
-            {LOGOS.map((LOGOS) => <SliderItem {...LOGOS} />)}
+        <div
+          class="slider-container pt-[75px] mt-7 pb-[35px] space-y-[64px] max-md:space-y-2 px-6"
+        >
+          <SliderTexto />
+          <div class="slider relative overflow-hidden flex">
+            <div class="slider-track flex gap-x-10 max-md:gap-x-[15px]">
+              {LOGOS.map((LOGOS) => <SliderItem {...LOGOS} />)}
+            </div>
           </div>
         </div>
-      </div>
 
-      <SponsorSlider />
+        <SponsorSlider />
+      </div>
     </section>
 
     <section id="contact" class="contact-container pt-24 mt-5">
-      <div class="contact-description">
-        <h1 class="contact-title">GENERATIVE AND OPTIMAL DESIGN SOLUTIONS</h1>
-        <p class="font-light text-xl text-pretty contact-text">
-          Contáctenos para ver cómo podemos mejorar su eficiencia y alcanzar sus
-          objetivos
-        </p>
+      <div class="contact-content">
+        <div class="contact-description">
+          <h1 class="contact-title">GENERATIVE AND OPTIMAL DESIGN SOLUTIONS</h1>
+          <p class="font-light text-xl text-pretty contact-text">
+            Contáctenos para ver cómo podemos mejorar su eficiencia y alcanzar
+            sus objetivos
+          </p>
 
-        <p class="font-light text-xl text-pretty contact-text-media">
-          Contáctenos para ver cómo podemos mejorar su eficiencia y alcanzar sus
-          objetivos
-        </p>
+          <p class="font-light text-xl text-pretty contact-text-media">
+            Contáctenos para ver cómo podemos mejorar su eficiencia y alcanzar
+            sus objetivos
+          </p>
 
-        <div class="contact-details">
-          <p class="font-light text-xl">Contáctanos:</p>
-          <a
-            href="https://mail.google.com/mail/?view=cm&to=Coordinador@genplusdesign.com"
-            target="_blank"
-            class="font-bold">Coordinador@genplusdesign.com</a
-          >
-          <span>/</span>
-          <span>995567873</span>
+          <div class="contact-details">
+            <p class="font-light text-xl">Contáctanos:</p>
+            <a
+              href="https://mail.google.com/mail/?view=cm&to=Coordinador@genplusdesign.com"
+              target="_blank"
+              class="font-bold">Coordinador@genplusdesign.com</a
+            >
+            <span>/</span>
+            <span>995567873</span>
+          </div>
         </div>
+        <Form />
       </div>
-      <Form />
     </section>
-    <Footer />
   </main>
+  <Footer />
 </Layout>
 
 <style>
-  main {
+  /* main {
     max-width: 1440px;
     margin-inline: auto;
     position: relative;
-  }
+  } */
 
   .sticky-button-1 {
     position: fixed;
@@ -371,7 +379,13 @@ const LOGOS = [
   }
 
   .home-container {
-    width: 100%;
+    height: 614px;
+    background: rgba(10, 36, 76, 0.8);
+  }
+
+  .home-content {
+    width: 1440px;
+    margin-inline: auto;
     height: 613px;
     padding: 125px 0px 18px 84px;
     position: relative;
@@ -391,8 +405,7 @@ const LOGOS = [
       z-index: 0;
 
       .home-video {
-        width: 100%;
-        height: 100%;
+        object-fit: cover;
       }
     }
 
@@ -482,18 +495,23 @@ const LOGOS = [
     background-image: url("/backgrounds/service-bg.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    padding: 45px 32px 58px;
 
-    .title {
-      margin-top: 35px;
-    }
+    .services-content {
+      width: 1440px;
+      padding: 45px 32px 58px;
+      margin-inline: auto;
 
-    .card-services {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px 40px;
+      .title {
+        margin-top: 35px;
+      }
+
+      .card-services {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px 40px;
+      }
     }
   }
 
@@ -501,8 +519,12 @@ const LOGOS = [
     width: 100%;
     padding-top: 48px;
     background-image: url("/backgrounds/sliders-bg.svg");
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background-size: cover;
+
+    .slider-content {
+      width: 1440px;
+      margin-inline: auto;
+    }
 
     .brochure-download {
       width: 804px;
@@ -544,16 +566,22 @@ const LOGOS = [
   .slider-container {
     width: 100%;
     background-image: url("/backgrounds/slider-bg.svg");
-    background-size: 100%;
+    background-size: 100% 200%;
     background-repeat: no-repeat;
   }
 
   .contact-container {
+    width: 100%;
+    background-image: url("/backgrounds/contact-bg.webp");
+    background-size: cover;
+  }
+
+  .contact-content {
+    width: 1440px;
+    margin-inline: auto;
     display: flex;
     justify-content: space-between;
     padding: 52px 70px;
-    background-image: url("/backgrounds/contact-bg.webp");
-    background-size: cover;
   }
 
   .contact-description {
@@ -633,7 +661,7 @@ const LOGOS = [
       line-height: normal;
     }
 
-    .home-container {
+    .home-content {
       height: 172px;
       padding: 25px 16px 10px;
 
@@ -669,7 +697,7 @@ const LOGOS = [
       }
     }
 
-    .services-container {
+    .services-content {
       padding: 30px 17px 17px;
 
       .title {
@@ -712,7 +740,7 @@ const LOGOS = [
       row-gap: 10px;
     }
 
-    .contact-container {
+    .contact-content {
       width: 100%;
       flex-direction: column;
       padding: 10px 27px;

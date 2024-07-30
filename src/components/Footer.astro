@@ -3,34 +3,39 @@ import LinkedIn from "./icons/LinkedIn.astro";
 ---
 
 <footer class="footer-container">
-  <div class="first-container">
-    <span>Términos generales y condiciones</span>
-    <span>Politicas de privacidad</span>
-  </div>
+  <div class="footer-content">
+    <div class="first-container">
+      <span>Términos generales y condiciones</span>
+      <span>Politicas de privacidad</span>
+    </div>
 
-  <div class="second-container">
-    <img src="/gen-logo-footer.svg" alt="" />
+    <div class="second-container">
+      <img src="/gen-logo-footer.svg" alt="" />
 
-    <span>@ copyrigth 2024 - Generative and Optimal design solutions</span>
-  </div>
+      <span>@ copyrigth 2024 - Generative and Optimal design solutions</span>
+    </div>
 
-  <div class="third-container">
-    <span>CONOCE MÁS: </span>
-    <a href="https://linkedin.com/company/gen-plus-design/" target="_blank">
-      <LinkedIn />
-    </a>
+    <div class="third-container">
+      <span>CONOCE MÁS: </span>
+      <a href="https://linkedin.com/company/gen-plus-design/" target="_blank">
+        <LinkedIn />
+      </a>
+    </div>
   </div>
 </footer>
 
 <style>
   .footer-container {
-    max-width: 1440px;
+    background-color: #0a244c;
+  }
+  .footer-content {
+    width: 1440px;
     height: 133px;
     padding: 44px 50px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0a244c;
     color: white;
     font-family: "plusjakartasans-semibold";
 
@@ -69,7 +74,7 @@ import LinkedIn from "./icons/LinkedIn.astro";
   }
 
   @media (max-width: 768px) {
-    .footer-container {
+    .footer-content {
       height: 87px;
       padding: 17px 16px;
 
