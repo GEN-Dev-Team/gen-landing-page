@@ -102,74 +102,64 @@ const SERVICES = [
 
 const LOGOS = [
   {
-    description: "Logo de Sofistik",
-    url: "/Softwares/DYNAMO.webp",
-  },
-
-  {
-    description: "Logo de Dynamo",
-    url: "/Softwares/Grasshopper.webp",
-  },
-
-  {
-    description: "Logo de Navis",
-    url: "/Softwares/PYTHON.webp",
-  },
-  {
-    description: "Logo de Python",
-    url: "/Softwares/RFEM.webp",
-  },
-  {
-    description: "Logo de Bentley Syncrho",
-    url: "/Softwares/REVIT.webp",
+    description: "Logo de SMath Solver y SMath Writer",
+    url: "/Softwares/Artboard 3 copy 0.webp",
   },
   {
     description: "Logo de SMath Solver y SMath Writer",
-    url: "/Softwares/LOGO 1.webp",
+    url: "/Softwares/Artboard 3 copy 1.webp",
   },
   {
     description: "Logo de SMath Solver y SMath Writer",
-    url: "/Softwares/LOGO 2.webp",
+    url: "/Softwares/Artboard 3 copy 2.webp",
   },
   {
     description: "Logo de SMath Solver y SMath Writer",
-    url: "/Softwares/LOGO 3.webp",
+    url: "/Softwares/Artboard 3 copy 3.webp",
   },
   {
     description: "Logo de SMath Solver y SMath Writer",
-    url: "/Softwares/LOGO 4.webp",
+    url: "/Softwares/Artboard 3 copy 4.webp",
   },
   {
     description: "Logo de SMath Solver y SMath Writer",
-    url: "/Softwares/LOGO 5.webp",
+    url: "/Softwares/Artboard 3 copy 5.webp",
   },
   {
     description: "Logo de SMath Solver y SMath Writer",
-    url: "/Softwares/LOGO 6.webp",
+    url: "/Softwares/Artboard 3 copy 6.webp",
   },
   {
     description: "Logo de SMath Solver y SMath Writer",
-    url: "/Softwares/LOGO 7.webp",
+    url: "/Softwares/Artboard 3 copy 7.webp",
   },
   {
     description: "Logo de SMath Solver y SMath Writer",
-    url: "/Softwares/LOGO 8.webp",
+    url: "/Softwares/Artboard 3 copy 8.webp",
   },
   {
     description: "Logo de SMath Solver y SMath Writer",
-    url: "/Softwares/LOGO 9.webp",
+    url: "/Softwares/Artboard 3 copy 9.webp",
   },
   {
     description: "Logo de SMath Solver y SMath Writer",
-    url: "/Softwares/LOGO 10.webp",
+    url: "/Softwares/Artboard 3 copy 10.webp",
   },
   {
     description: "Logo de SMath Solver y SMath Writer",
-    url: "/Softwares/LOGO 11.webp",
+    url: "/Softwares/Artboard 3 copy 11.webp",
   },
   {
     description: "Logo de SMath Solver y SMath Writer",
-    url: "/Softwares/LOGO 12.webp",
+    url: "/Softwares/Artboard 3 copy 12.webp",
+  },
+  {
+    description: "Logo de SMath Solver y SMath Writer",
+    url: "/Softwares/Artboard 3 copy 13.webp",
+  },
+  {
+    description: "Logo de SMath Solver y SMath Writer",
+    url: "/Softwares/Artboard 3 copy 14.webp",
   },
 ];
 ---
@@ -186,7 +176,7 @@ const LOGOS = [
     >
       <div class="dropdown-container">
         <div class="dropdown-icon">
-          <Whatsapp />
+          <Whatsapp class="max-sm:w-6" />
         </div>
         <img src="/src/assets/images/header-separator.svg" alt="" />
         <span class="dropdown-text">Contáctanos</span>
@@ -199,7 +189,7 @@ const LOGOS = [
     >
       <div class="dropdown-container">
         <div class="dropdown-icon">
-          <Brochure />
+          <Brochure class="max-sm:w-6" />
         </div>
         <img src="/src/assets/images/header-separator.svg" alt="" />
         <span class="dropdown-text">Descargar Brochure</span>
@@ -208,8 +198,12 @@ const LOGOS = [
 
     <section id="home" class="home-container">
       <div class="home-video-container">
-        <video autoplay loop src="/backgrounds/home-bg.mp4" class="home-video"
-        ></video>
+        <video
+          autoplay
+          muted
+          loop
+          src="/backgrounds/home-bg.mp4"
+          class="home-video"></video>
       </div>
       <div class="home-background-degre"></div>
       <span class="home-title"> Ingeniería Moderna: </span>
@@ -315,7 +309,7 @@ const LOGOS = [
   .sticky-button-1 {
     position: fixed;
     top: 200px;
-    right: calc((100% - 1440px) / 2);
+    right: 0;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -326,7 +320,7 @@ const LOGOS = [
   .sticky-button-2 {
     position: fixed;
     top: 300px;
-    right: calc((100% - 1440px) / 2);
+    right: 0;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -599,11 +593,11 @@ const LOGOS = [
 
   @keyframes slide {
     from {
-      transform: translateX(0);
+      transform: translateX(-50%);
     }
 
     to {
-      transform: translateX(-50%);
+      transform: translateX(0);
     }
   }
 
@@ -612,9 +606,31 @@ const LOGOS = [
       width: 100%;
     }
 
+    .sticky-button-1 {
+      top: 90px;
+    }
+    .sticky-button-2 {
+      top: 140px;
+    }
+
     .sticky-button-1,
     .sticky-button-2 {
-      display: none;
+      right: 0;
+      gap: 5px;
+    }
+
+    .dropdown-container {
+      width: 40px;
+      height: 40px;
+      padding: 13px 10px;
+      border-radius: 4px 0 0 4px;
+      font-size: 8px;
+    }
+
+    .dropdown-container:hover {
+      width: 100px;
+      gap: 5px;
+      line-height: normal;
     }
 
     .home-container {
