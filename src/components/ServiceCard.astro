@@ -17,12 +17,15 @@ const { service } = Astro.props;
   </label>
 
   <!-- Dropdown menu -->
-  <div class={`service-description ${Astro.props.class}`}>
+  <label
+    for=`dropdown-button-${service.id}`
+    class={`service-description ${Astro.props.class}`}
+  >
     <ul>
       {service.description.map((item: string) => <li>{item}</li>)}
     </ul>
     <CaretUp class="caret-up" />
-  </div>
+  </label>
 
   <img
     data-modal-target=`default-modal-${service.id}`
@@ -58,7 +61,7 @@ const { service } = Astro.props;
 
   .service-title {
     width: 100%;
-    height: 60px;
+    height: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,7 +69,7 @@ const { service } = Astro.props;
     color: #fff;
     text-align: center;
     font-family: "Ruberoid-semibold";
-    font-size: 18px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 600;
     line-height: 45px; /* 250% */
@@ -117,10 +120,11 @@ const { service } = Astro.props;
     font-weight: 300;
     line-height: 22px; /* 125% */
     z-index: 1;
+    cursor: pointer;
 
     ul {
       width: fit-content;
-      list-style: circle;
+      list-style: disc;
       margin-inline: auto;
     }
   }
