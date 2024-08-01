@@ -81,7 +81,10 @@ const { description, title } = Astro.props;
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const languageBtn = document.getElementById("language-btn");
+    const languageBtnMobile = document.getElementById("language-btn-mobile");
     const languageText = languageBtn!.getElementsByTagName("span")[0];
+    const languageTextMobile =
+      languageBtnMobile!.getElementsByTagName("span")[0];
 
     languageBtn?.addEventListener("click", () => {
       if (languageText.textContent === "ES") {
@@ -91,6 +94,16 @@ const { description, title } = Astro.props;
       }
       // console.log(languageBtn.textContent!.trim());
       changeLanguage(languageBtn.textContent!.trim());
+    });
+
+    languageBtnMobile?.addEventListener("click", () => {
+      if (languageTextMobile.textContent === "ES") {
+        languageTextMobile.textContent = "EN";
+      } else {
+        languageTextMobile.textContent = "ES";
+      }
+      // console.log(languageBtn.textContent!.trim());
+      changeLanguage(languageBtnMobile.textContent!.trim());
     });
   });
 

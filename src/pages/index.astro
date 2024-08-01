@@ -264,7 +264,7 @@ const LOGOS = [
     </a>
     <a
       class="sticky-button-2"
-      href="https://wa.me/+51902760892/?text=Hola AECODE. ¡Mira! Quiero compartirte los resultados del Shaman AI"
+      href="https://wa.me/+51902760892/?text=https://api.whatsapp.com/send?phone=+51902760892&text=Hola.%20Quiero%20Solicitar%20el%20Brochure%20de%20GEN+."
       target="_blank"
     >
       <div class="dropdown-container">
@@ -789,9 +789,18 @@ const LOGOS = [
       line-height: normal;
     }
 
+    .home-container {
+      height: 172px;
+    }
+
     .home-content {
+      width: 100%;
       height: 172px;
       padding: 25px 16px 10px;
+
+      .home-video {
+        height: 100%;
+      }
 
       .home-title {
         font-size: 14px;
@@ -825,22 +834,31 @@ const LOGOS = [
       }
     }
 
-    .services-content {
-      padding: 30px 17px 17px;
+    .services-container {
+      width: 100%;
 
-      .title {
-        margin-top: 0px;
-        margin-bottom: 17px;
-        font-size: 9px;
-      }
+      .services-content {
+        width: 100%;
+        padding: 30px 17px 17px;
 
-      .card-services {
-        gap: 15px;
+        .title {
+          margin-top: 0px;
+          margin-bottom: 17px;
+          font-size: 9px;
+        }
+
+        .card-services {
+          gap: 15px;
+        }
       }
     }
 
     .sliders-container {
-      padding-block: 20px;
+      padding-top: 20px;
+
+      .slider-content {
+        width: 100%;
+      }
 
       .brochure-download {
         width: 263px;
@@ -862,10 +880,12 @@ const LOGOS = [
     }
 
     .slider-container {
-      margin-top: 20px;
-      padding: 20px 4px;
-
+      padding: 0px 4px 10px;
       row-gap: 10px;
+    }
+
+    .contact-container {
+      padding-top: 0px;
     }
 
     .contact-content {
