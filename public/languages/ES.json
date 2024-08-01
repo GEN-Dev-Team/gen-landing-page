@@ -39,18 +39,11 @@
     "contact-title": "GENERATIVE AND OPTIMAL DESIGN SOLUTIONS",
     "contact-text": "Contáctenos para ver cómo podemos mejorar su eficiencia y alcanzar sus objetivos",
     "contact-text-media": "Contáctenos para ver cómo podemos mejorar su eficiencia y alcanzar sus objetivos",
-
-    "contact-details": {
-      "contact-details-title": "Contáctanos:",
-      "contact-text": "Contáctenos para ver qué podemos mejorar su eficiencia y alcanzar sus objetivos"
-    },
-
-    "form": {
-      "form-name": "Nombres y Apellidos:",
-      "form-email": "Email:",
-      "form-message": "Mensaje:",
-      "form-submit": "Enviar"
-    }
+    "contact-details-title": "Contáctanos:",
+    "form-name": "Nombres y Apellidos:",
+    "form-email": "Email:",
+    "form-message": "Mensaje:",
+    "form-submit": "Enviar"
   },
 
   "footer": {

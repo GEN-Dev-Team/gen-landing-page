@@ -83,7 +83,7 @@ const { description, title } = Astro.props;
     const languageBtn = document.getElementById("language-btn");
     const languageText = languageBtn!.getElementsByTagName("span")[0];
 
-    languageBtn?.addEventListener("click", (e) => {
+    languageBtn?.addEventListener("click", () => {
       if (languageText.textContent === "ES") {
         languageText.textContent = "EN";
       } else {
