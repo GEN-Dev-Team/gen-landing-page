@@ -12,7 +12,9 @@ const { service } = Astro.props;
     class="dropdown-button"
   />
   <label for=`dropdown-button-${service.id}` class="service-title">
-    <span> {service.title}</span>
+    <span data-section=`services-${service.id}` data-value=`title-${service.id}`>
+      {service.title}</span
+    >
     <CaretDown class="caret-down" />
   </label>
 
@@ -22,7 +24,13 @@ const { service } = Astro.props;
     class={`service-description ${Astro.props.class}`}
   >
     <ul>
-      {service.description.map((item: string) => <li>{item}</li>)}
+      {
+        service.description.map((item: string, index: string) => (
+          <li data-section=`services-${service.id}` data-value=`description-${index}`>
+            {item}
+          </li>
+        ))
+      }
     </ul>
     <CaretUp class="caret-up" />
   </label>

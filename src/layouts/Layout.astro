@@ -77,3 +77,38 @@ const { description, title } = Astro.props;
     color: #08224b;
   }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const languageBtn = document.getElementById("language-btn");
+    const languageText = languageBtn!.getElementsByTagName("span")[0];
+
+    languageBtn?.addEventListener("click", (e) => {
+      if (languageText.textContent === "ES") {
+        languageText.textContent = "EN";
+      } else {
+        languageText.textContent = "ES";
+      }
+      // console.log(languageBtn.textContent!.trim());
+      changeLanguage(languageBtn.textContent!.trim());
+    });
+  });
+
+  const textsToChange = document.querySelectorAll("[data-section]");
+
+  const changeLanguage = async (language: any) => {
+    const requestJson = await fetch(`/languages/${language}.json`);
+    const texts = await requestJson.json();
+    // console.log(texts);
+
+    for (const textToChange of textsToChange) {
+      // console.log(textToChange);
+      const section = textToChange.getAttribute("data-section");
+      const value = textToChange.getAttribute("data-value");
+
+      // console.log(section, value);
+
+      textToChange.innerHTML = texts[section!][value!];
+    }
+  };
+</script>

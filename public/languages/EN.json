@@ -1,0 +1,109 @@
+{
+  "sticky-button-1": {
+    "button-description": "Contact Us"
+  },
+
+  "sticky-button-2": {
+    "button-description": "Download Brochure"
+  },
+
+  "header-container": {
+    "about-us-btn": "ABOUT",
+    "services-btn": "SERVICES",
+    "contact-btn": "CONTACT",
+    "about-us-btn-mobile": "ABOUT",
+    "services-btn-mobile": "SERVICES",
+    "contact-btn-mobile": "CONTACT"
+  },
+
+  "home-container": {
+    "title": "Modern Engineering:",
+    "text": "Integrating technology, innovation and collaboration for a sustainable future",
+    "know-more": "KNOW MORE: "
+  },
+
+  "about-container": {
+    "title": "ABOUT US",
+    "about-description": "We offer advanced digitalization and process automation solutions with computational design, virtual construction and artificial intelligence, optimizing efficiency and quality in all phases of the project investment cycle, providing significant value to our collaborators"
+  },
+
+  "services-container": {
+    "title": "OUR SERVICES"
+  },
+
+  "sliders-container": {
+    "download-text": "Hello! I want to download the GEN+ brochure",
+    "title": "COLLABORATIONS AND RESEARCH"
+  },
+
+  "contact-container": {
+    "contact-title": "GENERATIVE AND OPTIMAL DESIGN SOLUTIONS",
+    "contact-text": "Contact us to see how we can improve your efficiency and achieve your goals",
+    "contact-text-media": "Contact us to see how we can improve your efficiency and achieve your goals",
+    "contact-details-title": "Contact us:",
+    "form-name": "First and Last Name:",
+    "form-email": "Email:",
+    "form-message": "Message:",
+    "form-submit": "Send"
+  },
+
+  "footer": {
+    "terms-and-conditions": "General terms and conditions",
+    "privacy-policy": "Privacy policies",
+    "know-more": "KNOW MORE: "
+  },
+  "services-1": {
+    "title-1": "BIM MANAGEMENT",
+    "description-0": "BIM Methodology | VDC",
+    "description-1": "4D | 5D BIM Modeling",
+    "description-2": "Renderings"
+  },
+  "services-2": {
+    "title-2": "BIM AUTOMATION",
+    "description-0": "Process Automation",
+    "description-1": "BIM Interoperability",
+    "description-2": "GUI Tools"
+  },
+  "services-3": {
+    "title-3": "DETAIL ENGINEERING",
+    "description-0": "Rebar Detailing",
+    "description-1": "Steel Detailing",
+    "description-2": "Measurements and Budgets"
+  },
+  "services-4": {
+    "title-4": "COMPUTATIONAL DESIGN",
+    "description-0": "Computational Design",
+    "description-1": "Parametric Design",
+    "description-2": "Generative Design"
+  },
+  "services-5": {
+    "title-5": "STRUCTURAL ENGINEERING",
+    "description-0": "Structural Analysis",
+    "description-1": "Structural Design",
+    "description-2": "Structural Verification"
+  },
+  "services-6": {
+    "title-6": "INTEGRATED OPTIMIZATION",
+    "description-0": "Structural Optimization",
+    "description-1": "Resource Optimization",
+    "description-2": "Sustainable Optimization"
+  },
+  "services-7": {
+    "title-7": "WEB DEVELOPMENT",
+    "description-0": "UX/UI Development",
+    "description-1": "Full Stack Development",
+    "description-2": "Business Analytics"
+  },
+  "services-8": {
+    "title-8": "AI IMPLEMENTATION",
+    "description-0": "Generative AI",
+    "description-1": "Machine Learning",
+    "description-2": "AI Automation Process"
+  },
+  "services-9": {
+    "title-9": "TRAINNING IN-HOUSE",
+    "description-0": "Computational Design BIM+",
+    "description-1": "Automation and Optimization",
+    "description-2": "Artificial Intelligence"
+  }
+}

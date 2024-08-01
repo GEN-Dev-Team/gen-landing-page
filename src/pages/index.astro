@@ -255,7 +255,11 @@ const LOGOS = [
           <Whatsapp class="max-sm:w-6" />
         </div>
         <img src="/src/assets/images/header-separator.svg" alt="" />
-        <span class="dropdown-text">Contáctanos</span>
+        <span
+          class="dropdown-text"
+          data-section="sticky-button-1"
+          data-value="button-description">Contáctanos</span
+        >
       </div>
     </a>
     <a
@@ -268,7 +272,11 @@ const LOGOS = [
           <Brochure class="max-sm:w-6" />
         </div>
         <img src="/src/assets/images/header-separator.svg" alt="" />
-        <span class="dropdown-text">Descargar Brochure</span>
+        <span
+          class="dropdown-text"
+          data-section="sticky-button-2"
+          data-value="button-description">Descargar Brochure</span
+        >
       </div>
     </a>
 
@@ -283,18 +291,35 @@ const LOGOS = [
             class="home-video"></video>
         </div>
         <div class="home-background-degre"></div>
-        <span class="home-title"> Ingeniería Moderna: </span>
-        <span class="home-text">
+        <span
+          class="home-title"
+          data-section="home-container"
+          data-value="title"
+        >
+          Ingeniería Moderna:
+        </span>
+        <span class="home-text" data-section="home-container" data-value="text">
           Integrando tecnología, innovación y colaboración para un futuro
           sostenible
         </span>
-        <a href="#services" class="home-button">CONOCE MAS</a>
+        <a
+          href="#services"
+          class="home-button"
+          data-section="home-container"
+          data-value="know-more">CONOCE MAS</a
+        >
       </div>
     </section>
 
     <section id="about" class="about-container">
-      <span class="title">NOSOTROS</span>
-      <p>
+      <span class="title" data-section="about-container" data-value="title"
+        >NOSOTROS</span
+      >
+      <p
+        class="about-description"
+        data-section="about-container"
+        data-value="about-description"
+      >
         Ofrecemos soluciones avanzadas de digitalización y automatización de
         procesos con diseño computacional, construcción virtual e inteligencia
         artificial, optimizando eficiencia y calidad en todas las fases del
@@ -305,7 +330,9 @@ const LOGOS = [
 
     <section id="services" class="services-container">
       <div class="services-content">
-        <h1 class="title">NUESTROS SERVICIOS</h1>
+        <h1 class="title" data-section="services-container" data-value="title">
+          NUESTROS SERVICIOS
+        </h1>
         <div class="card-services">
           {
             SERVICES.map((service) => (
@@ -327,7 +354,12 @@ const LOGOS = [
           target="_blank"
         >
           <img src="/brain-img.png" alt="" />
-          <span>Hola! quiero descargar el brochure de GEN+</span>
+          <span
+            class="download-text"
+            data-section="sliders-container"
+            data-value="download-text"
+            >Hola! quiero descargar el brochure de GEN+</span
+          >
           <div class="download-button">
             <Send class="absolute top-0 max-sm:size-[21px]" />
             <Download
@@ -354,19 +386,39 @@ const LOGOS = [
     <section id="contact" class="contact-container pt-24 mt-5">
       <div class="contact-content">
         <div class="contact-description">
-          <h1 class="contact-title">GENERATIVE AND OPTIMAL DESIGN SOLUTIONS</h1>
-          <p class="font-light text-xl text-pretty contact-text">
+          <h1
+            class="contact-title"
+            data-section="contact-container"
+            data-value="contact-title"
+          >
+            GENERATIVE AND OPTIMAL DESIGN SOLUTIONS
+          </h1>
+          <p
+            class="font-light text-xl text-pretty contact-text"
+            data-section="contact-container"
+            data-value="contact-text"
+          >
             Contáctenos para ver cómo podemos mejorar su eficiencia y alcanzar
             sus objetivos
           </p>
 
-          <p class="font-light text-xl text-pretty contact-text-media">
+          <p
+            class="font-light text-xl text-pretty contact-text-media"
+            data-section="contact-container"
+            data-value="contact-text-media"
+          >
             Contáctenos para ver cómo podemos mejorar su eficiencia y alcanzar
             sus objetivos
           </p>
 
           <div class="contact-details">
-            <p class="font-light text-xl">Contáctanos:</p>
+            <p
+              class="contact-details-title font-light text-xl"
+              data-section="contact-container"
+              data-value="contact-details-title"
+            >
+              Contáctanos:
+            </p>
             <a
               href="https://mail.google.com/mail/?view=cm&to=Coordinador@genplusdesign.com"
               target="_blank"

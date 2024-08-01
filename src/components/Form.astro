@@ -4,8 +4,11 @@
   method="POST"
 >
   <div class="mb-2">
-    <label for="Nombre" class="block mb-1 text-xl font-light"
-      >Nombres y Apellidos:</label
+    <label
+      for="Nombre"
+      class="block mb-1 text-xl font-light"
+      data-section="contact-container"
+      data-value="form-name">Nombres y Apellidos:</label
     >
     <input
       type="text"
@@ -13,22 +16,30 @@
       name="Nombre"
       required
       class="shadow-sm border text-xl rounded-md block w-full px-2.5 py-[2px] border-blue-700 focus:border-blue-700 outline-0 bg-transparent"
-      required
     />
   </div>
   <div class="mb-2">
-    <label for="Email" class="block mb-1 text-xl font-light">Email:</label>
+    <label
+      for="Email"
+      class="block mb-1 text-xl font-light"
+      data-section="contact-container"
+      data-value="form-email">Email:</label
+    >
     <input
       type="email"
       id="Email"
       name="Email"
       required
       class="shadow-sm border px-2.5 text-xl rounded-md w-full py-[2px] border-blue-700 outline-0 bg-transparent"
-      required
     />
   </div>
   <div class="mb-2">
-    <label for="Mensaje" class="block mb-1 text-xl font-light">Mensaje:</label>
+    <label
+      for="Mensaje"
+      class="block mb-1 text-xl font-light"
+      data-section="contact-container"
+      data-value="form-message">Mensaje:</label
+    >
     <textarea
       id="Mensaje"
       name="Mensaje"
@@ -41,7 +52,8 @@
   <button
     type="submit"
     class="text-white w-full font-bold text-xl bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-md px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-    >Enviar</button
+    data-section="contact-container"
+    data-value="form-submit">Enviar</button
   >
 </form>
 

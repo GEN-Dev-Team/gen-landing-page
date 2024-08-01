@@ -12,7 +12,9 @@ for (let i = 0; i <= 19; i++) {
 <div class="sponsor-slider-container relative">
   <SponsorSliderBg class="sponsor-slider-bg" />
   <div class="sponsor-slider-bg-mobile"></div>
-  <h2 class="slider-title">COLABORACIONES E INVESTIGACIONES</h2>
+  <h2 class="slider-title" data-section="sliders-container" data-value="title">
+    COLABORACIONES E INVESTIGACIONES
+  </h2>
   <div class="sponsors-container">
     {LOGOS.map((logo) => <img src={logo.url} class="grayscale-image" />)}
   </div>

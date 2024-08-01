@@ -5,8 +5,16 @@ import LinkedIn from "./icons/LinkedIn.astro";
 <footer class="footer-container">
   <div class="footer-content">
     <div class="first-container">
-      <span>Términos generales y condiciones</span>
-      <span>Politicas de privacidad</span>
+      <span
+        class="terms-and-conditions"
+        data-section="footer"
+        data-value="terms-and-conditions">Términos generales y condiciones</span
+      >
+      <span
+        class="privacy-policy"
+        data-section="footer"
+        data-value="privacy-policy">Politicas de privacidad</span
+      >
     </div>
 
     <div class="second-container">
@@ -16,7 +24,9 @@ import LinkedIn from "./icons/LinkedIn.astro";
     </div>
 
     <div class="third-container">
-      <span>CONOCE MÁS: </span>
+      <span class="know-more" data-section="footer" data-value="know-more"
+        >CONOCE MÁS:
+      </span>
       <a href="https://linkedin.com/company/gen-plus-design/" target="_blank">
         <LinkedIn />
       </a>

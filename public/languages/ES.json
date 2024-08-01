@@ -1,0 +1,117 @@
+{
+  "sticky-button-1": {
+    "button-description": "Contactanos"
+  },
+
+  "sticky-button-2": {
+    "button-description": "Descargar Brochure"
+  },
+
+  "header-container": {
+    "about-us-btn": "NOSOTROS",
+    "services-btn": "SERVICIOS",
+    "contact-btn": "CONTÁCTANOS",
+    "about-us-btn-mobile": "NOSOTROS",
+    "services-btn-mobile": "SERVICIOS",
+    "contact-btn-mobile": "CONTÁCTANOS"
+  },
+
+  "home-container": {
+    "title": "Ingeniería Moderna:",
+    "text": "Integrando tecnología, innovación y colaboración para un futuro sostenible"
+  },
+
+  "about-container": {
+    "title": "NOSOTROS",
+    "about-description": "Ofrecemos soluciones avanzadas de digitalización y automatización de procesos con diseño computacional, construcción virtual e inteligenciaartificial, optimizando eficiencia y calidad en todas las fases delciclo de inversión de proyectos, aportando un valor significativo a nuestros colaboradores"
+  },
+
+  "services-container": {
+    "title": "NUESTROS SERVICIOS"
+  },
+
+  "sliders-container": {
+    "download-text": "Hola! quiero descargar el brochure de GEN+",
+    "title": "COLABORACIONES E INVESTIGACIONES"
+  },
+
+  "contact-container": {
+    "contact-title": "GENERATIVE AND OPTIMAL DESIGN SOLUTIONS",
+    "contact-text": "Contáctenos para ver cómo podemos mejorar su eficiencia y alcanzar sus objetivos",
+    "contact-text-media": "Contáctenos para ver cómo podemos mejorar su eficiencia y alcanzar sus objetivos",
+
+    "contact-details": {
+      "contact-details-title": "Contáctanos:",
+      "contact-text": "Contáctenos para ver qué podemos mejorar su eficiencia y alcanzar sus objetivos"
+    },
+
+    "form": {
+      "form-name": "Nombres y Apellidos:",
+      "form-email": "Email:",
+      "form-message": "Mensaje:",
+      "form-submit": "Enviar"
+    }
+  },
+
+  "footer": {
+    "footer-title": "CONOCE MÁS:",
+    "terms-and-conditions": "Términos generales y condiciones",
+    "privacy-policy": "Politicas de privacidad",
+    "know-more": "CONOCE MÁS: "
+  },
+
+  "services-1": {
+    "title-1": "GESTIÓN BIM",
+    "description-0": "Metodología BIM | VDC",
+    "description-1": "Modelado BIM 4D | 5D",
+    "description-2": "Renderizados"
+  },
+  "services-2": {
+    "title-2": "AUTOMATIZACIÓN BIM",
+    "description-0": "Automatización de Procesos",
+    "description-1": "Interoperabilidad BIM",
+    "description-2": "Herramientas GUI"
+  },
+  "services-3": {
+    "title-3": "DETAIL ENGINEERING",
+    "description-0": "Rebar Detailing",
+    "description-1": "Steel Detailing",
+    "description-2": "Metrados y Presupuestos"
+  },
+  "services-4": {
+    "title-4": "DISEÑO COMPUTACIONAL",
+    "description-0": "Diseño Computacional",
+    "description-1": "Diseño Paramétrico",
+    "description-2": "Diseño Generativo"
+  },
+  "services-5": {
+    "title-5": "INGENIERÍA ESTRUCTURAL",
+    "description-0": "Análisis Estructural",
+    "description-1": "Diseño Estructural",
+    "description-2": "Verificación Estructural"
+  },
+  "services-6": {
+    "title-6": "INTEGRATED OPTIMIZATION",
+    "description-0": "Structural Optimization",
+    "description-1": "Resource Optimization",
+    "description-2": "Sustainable Optimization"
+  },
+  "services-7": {
+    "title-7": "DESARROLLO WEB",
+    "description-0": "UX/UI Development",
+    "description-1": "Full Stack Development",
+    "description-2": "Business Analytics"
+  },
+  "services-8": {
+    "title-8": "AI IMPLEMENTATION",
+    "description-0": "Generative AI",
+    "description-1": "Machine Learning",
+    "description-2": "AI Automation Process"
+  },
+  "services-9": {
+    "title-9": "TRAINNING IN-HOUSE",
+    "description-0": "Diseño Computacional BIM+",
+    "description-1": "Automatización y Optimización",
+    "description-2": "Inteligencia Artificial"
+  }
+}

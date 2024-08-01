@@ -33,24 +33,31 @@ import WorldIcon from "./icons/World.astro";
         <li>
           <a
             href="#about"
-            class="block text-gray-900 rounded"
-            aria-current="page">NOSOTROS</a
-          >
-        </li>
-        <li>
-          <a href="#services" class="block py-2 text-gray-900 rounded"
-            >SERVICIOS</a
-          >
-        </li>
-        <li>
-          <a href="#contact" class="block py-2 text-gray-900 rounded"
-            >CONTÁCTANOS</a
+            class="about-us-btn block text-gray-900 rounded"
+            aria-current="page"
+            data-section="header-container"
+            data-value="about-us-btn">NOSOTROS</a
           >
         </li>
         <li>
           <a
-            href="https://www.linkedin.com/company/93799969/admin/feed/posts/"
-            target="_blank"><WorldIcon class="size-5 rounded-sm" /> ES</a
+            href="#services"
+            class="services-btn block py-2 text-gray-900 rounded"
+            data-section="header-container"
+            data-value="services-btn">SERVICIOS</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="contact-btn block py-2 text-gray-900 rounded"
+            data-section="header-container"
+            data-value="contact-btn">CONTÁCTANOS</a
+          >
+        </li>
+        <li class="cursor-pointer">
+          <a class="language-btn" id="language-btn" target="_blank"
+            ><WorldIcon class="size-5 rounded-sm" /><span>ES</span></a
           >
         </li>
         <li>
@@ -65,11 +72,34 @@ import WorldIcon from "./icons/World.astro";
     <div class="dropdown">
       <Dropdown class="dropdown-button" />
       <div class="dropdown-content">
-        <a href="#about">NOSOTROS</a>
-        <a href="#services">SERVICIOS </a>
-        <a href="#contact">CONTÁCTANOS </a>
+        <a
+          href="#about"
+          class="about-us-btn-mobile"
+          data-section="header-container"
+          data-value="about-us-btn-mobile">NOSOTROS</a
+        >
+        <a
+          href="#services"
+          class="services-btn-mobile"
+          data-section="header-container"
+          data-value="services-btn-mobile"
+          >SERVICIOS
+        </a>
+        <a
+          href="#contact"
+          class="contact-btn-mobile"
+          data-section="header-container"
+          data-value="contact-btn-mobile"
+          >CONTÁCTANOS
+        </a>
         <a href="https://linkedin.com/company/gen-plus-design/">LINKEDIN </a>
-        <a href="#about">INGLES </a>
+        <a
+          href="#about"
+          class="language-btn-mobile"
+          data-section="header-container"
+          data-value="text"
+          >INGLES
+        </a>
       </div>
     </div>
   </div>
