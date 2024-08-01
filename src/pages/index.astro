@@ -348,9 +348,17 @@ const LOGOS = [
 
     <section class="sliders-container">
       <div class="slider-content">
+        <div class="slider-bg">
+          <div class="text-logos-bg"></div>
+        </div>
+        <div class="collabs-bg">
+          <div class="title-bg"></div>
+          <div class="logos-bg"></div>
+        </div>
+
         <a
           class="brochure-download"
-          href="https://www.canva.com/design/DAGLvcgZ7hE/XJ61PHCxRwqV0z5tPHHyPg/view?utm_content=DAGLvcgZ7hE&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+          href="https://wa.me/+51902760892/?text=https://api.whatsapp.com/send?phone=+51902760892&text=Hola.%20Quiero%20Solicitar%20el%20Brochure%20de%20GEN+."
           target="_blank"
         >
           <img src="/brain-img.png" alt="" />
@@ -368,9 +376,7 @@ const LOGOS = [
           </div>
         </a>
 
-        <div
-          class="slider-container pt-[75px] mt-7 pb-[35px] space-y-[64px] max-md:space-y-2 px-6"
-        >
+        <div class="slider-container pt-[75px] mt-7 pb-[35px] space-y-[64px]">
           <SliderTexto />
           <div class="slider relative overflow-hidden flex">
             <div class="slider-track flex gap-x-10 max-md:gap-x-[15px]">
@@ -383,7 +389,7 @@ const LOGOS = [
       </div>
     </section>
 
-    <section id="contact" class="contact-container pt-24 mt-5">
+    <section id="contact" class="contact-container mt-5">
       <div class="contact-content">
         <div class="contact-description">
           <h1
@@ -611,7 +617,7 @@ const LOGOS = [
     justify-content: center;
     color: #2165ff;
     font-family: "Ruberoid-semibold";
-    font-size: 20px;
+    font-size: 35px;
     font-style: normal;
     font-weight: 600;
     line-height: 50px; /* 250% */
@@ -652,6 +658,52 @@ const LOGOS = [
     .slider-content {
       width: 1440px;
       margin-inline: auto;
+      position: relative;
+
+      .slider-bg {
+        width: 100%;
+        height: 550px;
+        position: absolute;
+        bottom: 0;
+
+        .text-logos-bg {
+          width: 96%;
+          height: 100%;
+          margin-inline: auto;
+          border-radius: 10px;
+          background: #fff;
+          box-shadow: 0px 0px 15px 0px rgba(33, 101, 255, 0.57);
+        }
+      }
+
+      .collabs-bg {
+        width: 100%;
+        height: 290px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        position: absolute;
+        bottom: 0;
+
+        /* .title-bg {
+          width: 70%;
+          height: 200px;
+          margin-inline: auto;
+          border-radius: 10px 10px 0 0;
+          background-color: white;
+          filter: drop-shadow(0px 0px 14px #2165ff);
+        } */
+
+        .logos-bg {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+          background-color: white;
+          filter: drop-shadow(0px 0px 5px #2165ff);
+          position: absolute;
+          bottom: 0;
+        }
+      }
     }
 
     .brochure-download {
@@ -692,14 +744,16 @@ const LOGOS = [
   }
 
   .slider-container {
+    padding-inline: 40px;
     width: 100%;
-    background-image: url("/backgrounds/slider-bg.svg");
+    /* background-image: url("/backgrounds/slider-bg.svg"); */
     background-size: 100% 200%;
     background-repeat: no-repeat;
   }
 
   .contact-container {
     width: 100%;
+    padding-top: 40px;
     background-image: url("/backgrounds/contact-bg.webp");
     background-size: cover;
   }
@@ -825,7 +879,7 @@ const LOGOS = [
       padding: 15px 28px 0 37px;
 
       .title {
-        font-size: 9px;
+        font-size: 14px;
       }
 
       p {
@@ -880,6 +934,7 @@ const LOGOS = [
     }
 
     .slider-container {
+      margin-top: 10px;
       padding: 0px 4px 10px;
       row-gap: 10px;
     }
