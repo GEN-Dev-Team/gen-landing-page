@@ -15,7 +15,7 @@ const { service } = Astro.props;
     <span data-section=`services-${service.id}` data-value=`title-${service.id}`>
       {service.title}</span
     >
-    <CaretDown class="caret-down" />
+    <CaretDown class="caret-down fill-white" />
   </label>
 
   <!-- Dropdown menu -->
@@ -32,7 +32,7 @@ const { service } = Astro.props;
         ))
       }
     </ul>
-    <CaretUp class="caret-up" />
+    <CaretUp class="caret-up fill-white" />
   </label>
 
   <img
@@ -172,10 +172,10 @@ const { service } = Astro.props;
     }
 
     .service-title {
-      padding-top: 5px;
+      padding-top: 6px;
       border-radius: 4px;
       font-size: 8px;
-      height: 27px;
+      height: 25px;
 
       span {
         height: 10px;
@@ -183,20 +183,39 @@ const { service } = Astro.props;
       }
     }
 
-    .caret-down {
-      width: 6px;
-    }
-    .caret-up {
-      margin-top: 10px;
-      width: 6px;
-    }
-
     .service-description {
       width: 163px;
-      height: 55px;
+      height: 50px;
       border-radius: 0px 0px 4px 4px;
       font-size: 6px;
       line-height: 10px; /* 125% */
     }
+
+    .caret-down {
+      width: 6px;
+    }
+    
+    .caret-up {
+      margin-top: 6px;
+      width: 6px;
+    }
+
+  .service-image {
+    border-radius: 0 0 4px 4px;
+  }
+
+  .modal-content {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+
+    img {
+      border-radius: 10px;
+    }
+  }
+
+
+    
   }
 </style>

@@ -7,6 +7,8 @@ import SliderTexto from "../components/SliderTexto.astro";
 import SliderItem from "../components/Slider-Item.astro";
 import Whatsapp from "../components/icons/Whatsapp.astro";
 import Brochure from "../components/icons/Brochure.astro";
+import CaretDown from "../components/icons/Caret-down.astro";
+import CaretUp from "../components/icons/Caret-up.astro";
 import SponsorSlider from "../components/Sponsor-Slider.astro";
 import Send from "../components/icons/Send.astro";
 import Download from "../components/icons/Download.astro";
@@ -344,6 +346,16 @@ const LOGOS = [
           }
         </div>
       </div>
+      <div class="input-display-services">
+        <input type="checkbox" id="input-display-services" />
+        <label for="input-display-services"
+          >Ver todos los servicios
+          <span class="caret-down"
+            ><CaretDown class="w-[6px] fill-skyblue" /></span
+          >
+          <span class="caret-up"><CaretUp class="w-[6px] fill-skyblue" /></span>
+        </label>
+      </div>
     </section>
 
     <section class="sliders-container">
@@ -354,6 +366,7 @@ const LOGOS = [
         <div class="collabs-bg">
           <div class="title-bg"></div>
           <div class="logos-bg"></div>
+          <div class="collabs-bg-white"></div>
         </div>
 
         <a
@@ -647,6 +660,10 @@ const LOGOS = [
         gap: 30px 40px;
       }
     }
+
+    .input-display-services {
+      display: none;
+    }
   }
 
   .sliders-container {
@@ -702,6 +719,10 @@ const LOGOS = [
           filter: drop-shadow(0px 0px 5px #2165ff);
           position: absolute;
           bottom: 0;
+        }
+
+        .collabs-bg-white {
+          display: none;
         }
       }
     }
@@ -902,7 +923,40 @@ const LOGOS = [
         }
 
         .card-services {
+          height: 315px;
+          overflow-y: hidden;
           gap: 15px;
+        }
+      }
+
+      .input-display-services {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        color: #2165ff;
+        text-align: center;
+        font-family: "ruberoid-semibold";
+        font-size: 9px;
+        letter-spacing: 0.009px;
+
+        input {
+          display: none;
+
+          &:checked {
+          }
+        }
+
+        label {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          gap: 5px;
+          margin-inline: auto;
+          align-items: center;
+
+          .caret-up {
+            display: none;
+          }
         }
       }
     }
@@ -917,12 +971,21 @@ const LOGOS = [
           height: 280px;
 
           .text-logos-bg {
-            height: 100%;
+            height: 80%;
           }
         }
 
         .collabs-bg {
           height: 210px;
+
+          .collabs-bg-white {
+            width: 100%;
+            height: 10%;
+            display: block;
+            position: absolute;
+            bottom: -14px;
+            background-color: white;
+          }
         }
       }
 
@@ -1009,3 +1072,25 @@ const LOGOS = [
     }
   }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const dropdownButton = document.getElementById(
+      "input-display-services"
+    ) as HTMLInputElement;
+    const cardServices = document.querySelector(
+      ".card-services"
+    ) as HTMLInputElement;
+    const caretUp = document.querySelector(".caret-up") as HTMLInputElement;
+    const caretDown = document.querySelector(".caret-down") as HTMLInputElement;
+
+    dropdownButton!.addEventListener("change", () => {
+      if (dropdownButton.checked) {
+        cardServices!.style.height = "auto";
+        caretUp!.style.display = "block";
+      } else {
+        cardServices!.style.height = "315px";
+      }
+    });
+  });
+</script>
