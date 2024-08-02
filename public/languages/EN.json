@@ -28,7 +28,8 @@
   },
 
   "services-container": {
-    "title": "OUR SERVICES"
+    "title": "OUR SERVICES",
+    "all-services": "See all services"
   },
 
   "sliders-container": {

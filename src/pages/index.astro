@@ -349,7 +349,9 @@ const LOGOS = [
       <div class="input-display-services">
         <input type="checkbox" id="input-display-services" />
         <label for="input-display-services"
-          >Ver todos los servicios
+          ><span data-section="services-container" data-value="all-services"
+            >Ver todos los servicios</span
+          >
           <span class="caret-down"
             ><CaretDown class="w-[6px] fill-skyblue" /></span
           >
@@ -871,7 +873,7 @@ const LOGOS = [
     .home-content {
       width: 100%;
       height: 172px;
-      padding: 25px 16px 10px;
+      padding: 45px 16px 10px;
 
       .home-video {
         height: 100%;
@@ -889,10 +891,7 @@ const LOGOS = [
         line-height: normal;
       }
       .home-button {
-        width: 132px;
-        height: 31px;
-        margin-top: 16px;
-        font-size: 12px;
+        display: none;
       }
     }
 
@@ -959,6 +958,18 @@ const LOGOS = [
           }
         }
       }
+    }
+
+    .caret-up {
+      display: none;
+    }
+
+    .input-display-services input:checked + label .caret-down {
+      display: none;
+    }
+
+    .input-display-services input:checked + label .caret-up {
+      display: inline;
     }
 
     .sliders-container {
@@ -1080,16 +1091,19 @@ const LOGOS = [
     ) as HTMLInputElement;
     const cardServices = document.querySelector(
       ".card-services"
-    ) as HTMLInputElement;
-    const caretUp = document.querySelector(".caret-up") as HTMLInputElement;
-    const caretDown = document.querySelector(".caret-down") as HTMLInputElement;
+    ) as HTMLDivElement;
+    const caretUp = document.querySelector(".caret-up") as HTMLSpanElement;
+    const caretDown = document.querySelector(".caret-down") as HTMLSpanElement;
 
     dropdownButton!.addEventListener("change", () => {
       if (dropdownButton.checked) {
         cardServices!.style.height = "auto";
-        caretUp!.style.display = "block";
+        caretUp!.style.display = "inline";
+        caretDown!.style.display = "none";
       } else {
         cardServices!.style.height = "315px";
+        caretUp!.style.display = "none";
+        caretDown!.style.display = "inline";
       }
     });
   });
