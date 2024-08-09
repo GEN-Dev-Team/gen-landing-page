@@ -10,6 +10,7 @@ import Brochure from "../components/icons/Brochure.astro";
 import CaretDown from "../components/icons/Caret-down.astro";
 import CaretUp from "../components/icons/Caret-up.astro";
 import SponsorSlider from "../components/Sponsor-Slider.astro";
+import ServicesSlider from "../components/Services-Slider.astro";
 import Send from "../components/icons/Send.astro";
 import Download from "../components/icons/Download.astro";
 
@@ -252,7 +253,6 @@ const LOGOS = [
       href="https://wa.me/+51902760892/?text=¡Hola! Me gustaría agendar una reunión para saber más acerca de GEN+ y los servicios que brindan."
       target="_blank"
     >
-      <!-- <div></div> -->
       <div class="dropdown-container">
         <div class="dropdown-icon">
           <Whatsapp class="max-sm:w-6" />
@@ -341,11 +341,13 @@ const LOGOS = [
             SERVICES.map((service) => (
               <ServiceCard
                 service={service}
-                class={`${service.id === 2 || service.id === 5 || service.id === 8 ? "bg-skyblue" : "bg-black-blue"}`}
+                class={`carousel-item ${service.id === 2 || service.id === 5 || service.id === 8 ? "bg-skyblue" : "bg-black-blue"}`}
               />
             ))
           }
         </div>
+
+        <!-- <ServicesSlider  services={SERVICES} /> -->
       </div>
       <div class="input-display-services">
         <input type="checkbox" id="input-display-services" />
@@ -364,12 +366,22 @@ const LOGOS = [
     <section class="sliders-container">
       <div class="slider-content">
         <div class="slider-bg">
-          <div class="text-logos-bg"></div>
+          <div class="text-logos-bg">
+            <div class="slider-container">
+              <SliderTexto />
+              <div class="slider relative overflow-hidden flex">
+                <div class="slider-track flex gap-x-10 max-md:gap-x-[15px]">
+                  {LOGOS.map((LOGOS) => <SliderItem {...LOGOS} />)}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="collabs-bg">
           <div class="title-bg"></div>
           <div class="logos-bg"></div>
           <div class="collabs-bg-white"></div>
+          <SponsorSlider />
         </div>
 
         <a
@@ -391,17 +403,6 @@ const LOGOS = [
             />
           </div>
         </a>
-
-        <div class="slider-container pt-[75px] mt-7 pb-[35px] space-y-[64px]">
-          <SliderTexto />
-          <div class="slider relative overflow-hidden flex">
-            <div class="slider-track flex gap-x-10 max-md:gap-x-[15px]">
-              {LOGOS.map((LOGOS) => <SliderItem {...LOGOS} />)}
-            </div>
-          </div>
-        </div>
-
-        <SponsorSlider />
       </div>
     </section>
 
@@ -677,18 +678,19 @@ const LOGOS = [
 
     .slider-content {
       width: 1440px;
+      height: 630px;
       margin-inline: auto;
       position: relative;
 
       .slider-bg {
         width: 100%;
-        height: 550px;
+        height: 83%;
         position: absolute;
         bottom: 0;
 
         .text-logos-bg {
           width: 96%;
-          height: 100%;
+          height: 70%;
           margin-inline: auto;
           border-radius: 10px;
           background: #fff;
@@ -698,25 +700,26 @@ const LOGOS = [
 
       .collabs-bg {
         width: 100%;
-        height: 290px;
-        display: flex;
-        flex-direction: column;
-        border-radius: 10px;
+        height: 46%;
         position: absolute;
         bottom: 0;
 
-        /* .title-bg {
+        .title-bg {
           width: 70%;
-          height: 200px;
+          height: 90%;
           margin-inline: auto;
           border-radius: 10px 10px 0 0;
           background-color: white;
-          filter: drop-shadow(0px 0px 14px #2165ff);
-        } */
+          filter: drop-shadow(0px 0px 5px #2165ff);
+          position: absolute;
+          bottom: 10%;
+          left: 50%;
+          transform: translate(-50%);
+        }
 
         .logos-bg {
           width: 100%;
-          height: 100%;
+          height: 90%;
           border-radius: 10px;
           background-color: white;
           filter: drop-shadow(0px 0px 5px #2165ff);
@@ -725,7 +728,13 @@ const LOGOS = [
         }
 
         .collabs-bg-white {
-          display: none;
+          width: 70%;
+          height: 95%;
+          background-color: white;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, 0);
         }
       }
     }
@@ -768,8 +777,11 @@ const LOGOS = [
   }
 
   .slider-container {
-    padding-inline: 40px;
     width: 100%;
+    padding: 50px 22px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     /* background-image: url("/backgrounds/slider-bg.svg"); */
     background-size: 100% 200%;
     background-repeat: no-repeat;
@@ -990,13 +1002,33 @@ const LOGOS = [
         .collabs-bg {
           height: 210px;
 
-          .collabs-bg-white {
-            width: 100%;
-            height: 10%;
-            display: block;
-            position: absolute;
-            bottom: -14px;
+          .title-bg {
+            width: 90%;
+            height: 200px;
+            margin-inline: auto;
+            border-radius: 4px 4px 0 0;
             background-color: white;
+            filter: drop-shadow(0px 0px 5px #2165ff);
+          }
+
+          .logos-bg {
+            width: 100%;
+            height: 85%;
+            border-radius: 4px;
+            background-color: white;
+            filter: drop-shadow(0px 0px 5px #2165ff);
+            position: absolute;
+            bottom: 0;
+          }
+
+          .collabs-bg-white {
+            width: 90%;
+            height: 90%;
+            background-color: white;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
           }
         }
       }
@@ -1086,6 +1118,7 @@ const LOGOS = [
 </style>
 
 <script>
+  //Dropdowns
   document.addEventListener("DOMContentLoaded", function () {
     const dropdownButton = document.getElementById(
       "input-display-services"
@@ -1108,4 +1141,33 @@ const LOGOS = [
       }
     });
   });
+
+  //Github animation for slider
+
+  const carouselElement = document.querySelector(
+    ".text-logos-bg"
+  ) as HTMLElement;
+
+  carouselElement.addEventListener("mousemove", (event: MouseEvent) => {
+    const rect = carouselElement.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+
+    // Calcular el ángulo de rotación basado en la posición del mouse
+    const rotateX = (y / rect.height - 0.5) * 3; // Ángulo de rotación X
+    const rotateY = (x / rect.width - 0.5) * -3; // Ángulo de rotación Y
+
+    // Aplicar la transformación y sombra
+    carouselElement.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    carouselElement.style.boxShadow = `${rotateY}px ${rotateX}px 20px rgba(0, 0, 0, 0.3)`;
+  });
+
+  carouselElement.addEventListener("mouseleave", () => {
+    // Restaurar la sombra y la transformación original al salir el mouse
+    carouselElement.style.transform =
+      "perspective(1000px) rotateX(0deg) rotateY(0deg)";
+    carouselElement.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+  });
+
+  //Carousel
 </script>
