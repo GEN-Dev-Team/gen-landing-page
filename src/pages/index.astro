@@ -1151,8 +1151,8 @@ const LOGOS = [
     const y = event.clientY - rect.top;
 
     // Calcular el ángulo de rotación basado en la posición del mouse
-    const rotateX = (y / rect.height - 0.5) * 3; // Ángulo de rotación X
-    const rotateY = (x / rect.width - 0.5) * -3; // Ángulo de rotación Y
+    const rotateX = (y / rect.height - 0.5) * 5; // Ángulo de rotación Y
+    const rotateY = (x / rect.width - 0.5) * -3; // Ángulo de rotación X
 
     // Aplicar la transformación y sombra
     carouselElement.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
