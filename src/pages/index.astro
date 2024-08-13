@@ -380,6 +380,7 @@ const LOGOS = [
           <div class="title-bg"></div>
           <div class="logos-bg"></div>
           <div class="collabs-bg-white"></div>
+          <div class="collabs-bg-white-mobile"></div>
           <SponsorSlider />
         </div>
 
@@ -702,6 +703,9 @@ const LOGOS = [
         height: 46%;
         position: absolute;
         bottom: 0;
+        will-change: transform;
+        backface-visibility: hidden;
+        transform: translateZ(0);
 
         .title-bg {
           width: 70%;
@@ -734,6 +738,10 @@ const LOGOS = [
           bottom: 0;
           left: 50%;
           transform: translate(-50%, 0);
+        }
+
+        .collabs-bg-white-mobile {
+          display: none;
         }
       }
     }
@@ -925,7 +933,7 @@ const LOGOS = [
 
       .services-content {
         width: 100%;
-        padding: 30px 17px 17px;
+        padding: 30px 15px 17px;
 
         .title {
           margin-top: 0px;
@@ -985,10 +993,12 @@ const LOGOS = [
     }
 
     .sliders-container {
+      height: 340px;
       padding-top: 20px;
 
       .slider-content {
         width: 100%;
+        height: 100%;
 
         .slider-bg {
           height: 280px;
@@ -1003,7 +1013,7 @@ const LOGOS = [
 
           .title-bg {
             width: 90%;
-            height: 200px;
+            height: 170px;
             margin-inline: auto;
             border-radius: 4px 4px 0 0;
             background-color: white;
@@ -1026,6 +1036,17 @@ const LOGOS = [
             background-color: white;
             position: absolute;
             bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+          }
+
+          .collabs-bg-white-mobile {
+            display: inherit;
+            width: 100%;
+            height: 90%;
+            background-color: white;
+            position: absolute;
+            bottom: -10px;
             left: 50%;
             transform: translate(-50%, 0);
           }
@@ -1055,7 +1076,7 @@ const LOGOS = [
     .slider-container {
       margin-top: 10px;
       padding: 0px 10px;
-      row-gap: 10px;
+      row-gap: 0px;
 
       .slider {
         margin-top: 10px;
@@ -1069,7 +1090,7 @@ const LOGOS = [
     .contact-content {
       width: 100%;
       flex-direction: column;
-      padding: 10px 27px;
+      padding: 25px 27px 10px;
       margin-top: 0px;
     }
 
@@ -1150,20 +1171,14 @@ const LOGOS = [
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
 
-    // Calcular el ángulo de rotación basado en la posición del mouse
-    const rotateX = (y / rect.height - 0.5) * 5; // Ángulo de rotación Y
-    const rotateY = (x / rect.width - 0.5) * -3; // Ángulo de rotación X
+    const rotateX = (y / rect.height - 0.5) * 5;
+    const rotateY = (x / rect.width - 0.5) * -3;
 
-    // Aplicar la transformación y sombra
     carouselElement.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
   });
 
   carouselElement.addEventListener("mouseleave", () => {
-    // Restaurar la sombra y la transformación original al salir el mouse
     carouselElement.style.transform =
       "perspective(1000px) rotateX(0deg) rotateY(0deg)";
-    carouselElement.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
   });
-
-  //Carousel
 </script>
