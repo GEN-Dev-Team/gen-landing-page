@@ -687,6 +687,10 @@ const LOGOS = [
       padding: 80px 32px 58px;
       margin-inline: auto;
 
+      .service-carousel-item {
+        display: none;
+      }
+
       .title {
         margin-top: 35px;
       }
@@ -1002,6 +1006,7 @@ const LOGOS = [
 
             .service-carousel-item,
             .service-carousel-item-selected {
+              display: block;
               width: 55%;
               height: 90%;
               flex-shrink: 0;
@@ -1201,8 +1206,8 @@ const LOGOS = [
       });
       punto[i].classList.add("activo");
 
-      console.log(posicion);
-      console.log(carouselItems);
+      // console.log(posicion);
+      // console.log(carouselItems);
 
       carouselItems.forEach((cadaItem, j) => {
         carouselItems[j].classList.remove("selected");
