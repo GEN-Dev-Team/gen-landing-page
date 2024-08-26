@@ -7,8 +7,6 @@ import SliderTexto from "../components/SliderTexto.astro";
 import SliderItem from "../components/Slider-Item.astro";
 import Whatsapp from "../components/icons/Whatsapp.astro";
 import Brochure from "../components/icons/Brochure.astro";
-import CaretDown from "../components/icons/Caret-down.astro";
-import CaretUp from "../components/icons/Caret-up.astro";
 import SponsorSlider from "../components/Sponsor-Slider.astro";
 import Send from "../components/icons/Send.astro";
 import Download from "../components/icons/Download.astro";
@@ -92,6 +90,16 @@ const SERVICES = [
   },
   {
     id: 9,
+    title: "TRAINNING IN-HOUSE",
+    description: [
+      "Diseño Computacional BIM+",
+      "Automatización y Optimización",
+      "Inteligencia Artificial",
+    ],
+    url: "/services/Training in House.webp",
+  },
+  {
+    id: 10,
     title: "TRAINNING IN-HOUSE",
     description: [
       "Diseño Computacional BIM+",
@@ -335,30 +343,57 @@ const LOGOS = [
         <h1 class="title" data-section="services-container" data-value="title">
           NUESTROS SERVICIOS
         </h1>
-        <div class="card-services">
-          {
-            SERVICES.map((service) => (
-              <ServiceCard
-                service={service}
-                class={`carousel-item ${service.id === 2 || service.id === 5 || service.id === 8 ? "bg-skyblue" : "bg-black-blue"}`}
-              />
-            ))
-          }
+
+        <!-- <div class="services-carousel-mobile">
+          <ServicesCarousel />
+        </div> -->
+
+        <div class="carrousel">
+          <div class="card-services">
+            {
+              SERVICES.filter((service, index) => index === 9).map(
+                (service) => (
+                  <ServiceCard
+                    service={service}
+                    class={`service-carousel-item first bg-black-blue`}
+                  />
+                )
+              )
+            }
+            {
+              SERVICES.slice(0, 9).map((service) => (
+                <ServiceCard
+                  service={service}
+                  class={`service-carousel-item-selected ${service.id === 2 || service.id === 5 || service.id === 8 ? "bg-skyblue" : "bg-black-blue"} ${service.id === 1 ? "selected" : ""} ${service.id === 0 ? "first" : ""}`}
+                />
+              ))
+            }
+            {
+              SERVICES.filter((service, index) => index === 0).map(
+                (service) => (
+                  <ServiceCard
+                    service={service}
+                    class={`service-carousel-item bg-black-blue`}
+                  />
+                )
+              )
+            }
+          </div>
         </div>
 
         <!-- <ServicesSlider  services={SERVICES} /> -->
-      </div>
-      <div class="input-display-services">
-        <input type="checkbox" id="input-display-services" />
-        <label for="input-display-services"
-          ><span data-section="services-container" data-value="all-services"
-            >Ver todos los servicios</span
-          >
-          <span class="caret-down"
-            ><CaretDown class="w-[6px] fill-skyblue" /></span
-          >
-          <span class="caret-up"><CaretUp class="w-[6px] fill-skyblue" /></span>
-        </label>
+
+        <ul class="puntos">
+          <li class="punto activo first"></li>
+          <li class="punto"></li>
+          <li class="punto"></li>
+          <li class="punto"></li>
+          <li class="punto"></li>
+          <li class="punto"></li>
+          <li class="punto"></li>
+          <li class="punto"></li>
+          <li class="punto"></li>
+        </ul>
       </div>
     </section>
 
@@ -656,16 +691,19 @@ const LOGOS = [
         margin-top: 35px;
       }
 
-      .card-services {
+      .carrousel {
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px 40px;
+
+        .card-services {
+          display: flex;
+          flex-wrap: wrap;
+          margin-inline: auto;
+          gap: 30px 40px;
+        }
       }
     }
 
-    .input-display-services {
+    .puntos {
       display: none;
     }
   }
@@ -932,49 +970,64 @@ const LOGOS = [
       width: 100%;
 
       .services-content {
+        flex-flow: column wrap;
         width: 100%;
         padding: 30px 15px 17px;
+        gap: 20px;
 
         .title {
           margin-top: 0px;
-          margin-bottom: 17px;
           font-size: 14px;
         }
 
-        .card-services {
-          height: 315px;
-          overflow-y: hidden;
-          gap: 15px;
-        }
-      }
+        .carrousel {
+          width: 100%;
+          display: flex;
+          flex-flow: column wrap;
+          overflow-x: hidden;
+          gap: 18px;
 
-      .input-display-services {
-        display: block;
-        width: 100%;
-        margin-bottom: 15px;
-        color: #2165ff;
-        text-align: center;
-        font-family: "ruberoid-semibold";
-        font-size: 9px;
-        letter-spacing: 0.009px;
+          .card-services {
+            width: 100%;
+            height: 121px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: inherit;
+            gap: 20px;
+            margin-bottom: 19px;
+            align-items: center;
+            margin-inline: auto;
+            transition: transform 0.3s ease-in-out;
+            /* transform: translateX(-58%); */
 
-        input {
-          display: none;
-
-          &:checked {
+            .service-carousel-item,
+            .service-carousel-item-selected {
+              width: 55%;
+              height: 90%;
+              flex-shrink: 0;
+              transition: scale 0.3s ease-in-out;
+            }
           }
         }
 
-        label {
+        .puntos {
           display: flex;
-          flex-direction: row;
+          flex-flow: row nowrap;
           justify-content: center;
-          gap: 5px;
-          margin-inline: auto;
           align-items: center;
+          gap: 10px;
 
-          .caret-up {
-            display: none;
+          .punto {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            border: 1px solid #b8b8b8;
+            background-color: #b8b8b8;
+          }
+
+          .activo {
+            border: 1px solid #08224b;
+            background-color: #08224b;
           }
         }
       }
@@ -982,14 +1035,6 @@ const LOGOS = [
 
     .caret-up {
       display: none;
-    }
-
-    .input-display-services input:checked + label .caret-down {
-      display: none;
-    }
-
-    .input-display-services input:checked + label .caret-up {
-      display: inline;
     }
 
     .sliders-container {
@@ -1138,27 +1183,31 @@ const LOGOS = [
 </style>
 
 <script>
-  //Dropdowns
-  document.addEventListener("DOMContentLoaded", function () {
-    const dropdownButton = document.getElementById(
-      "input-display-services"
-    ) as HTMLInputElement;
-    const cardServices = document.querySelector(
-      ".card-services"
-    ) as HTMLDivElement;
-    const caretUp = document.querySelector(".caret-up") as HTMLSpanElement;
-    const caretDown = document.querySelector(".caret-down") as HTMLSpanElement;
+  const grande = document.querySelector(".card-services") as HTMLElement;
+  const punto = document.querySelectorAll(".punto");
+  const carouselItems = document.querySelectorAll(
+    ".service-carousel-item-selected"
+  );
 
-    dropdownButton!.addEventListener("change", () => {
-      if (dropdownButton.checked) {
-        cardServices!.style.height = "auto";
-        caretUp!.style.display = "inline";
-        caretDown!.style.display = "none";
-      } else {
-        cardServices!.style.height = "315px";
-        caretUp!.style.display = "none";
-        caretDown!.style.display = "inline";
-      }
+  punto.forEach((cadaPunto, i) => {
+    punto[i].addEventListener("click", () => {
+      let posicion = i;
+      let operacion = posicion * -60.8;
+
+      grande.style.transform = `translateX(${operacion}%)`;
+
+      punto.forEach((cadaPunto, i) => {
+        punto[i].classList.remove("activo");
+      });
+      punto[i].classList.add("activo");
+
+      console.log(posicion);
+      console.log(carouselItems);
+
+      carouselItems.forEach((cadaItem, j) => {
+        carouselItems[j].classList.remove("selected");
+      });
+      carouselItems[posicion].classList.add("selected");
     });
   });
 
